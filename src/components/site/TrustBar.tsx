@@ -1,8 +1,11 @@
+import { SITE } from "@/lib/site";
+
+/* TEMPLATE — números de exemplo. Substituir pelos dados reais do cliente. */
 const stats = [
-  { value: "+15", label: "anos de experiência" },
-  { value: "+8.000", label: "atendimentos realizados" },
-  { value: "5.0", label: "nota no Google" },
-  { value: "RS", label: "atendemos todo o estado" },
+  { value: "+00", label: "anos de experiência" },
+  { value: "+0.000", label: "atendimentos realizados" },
+  { value: "0.0", label: "nota no Google" },
+  { value: SITE.state, label: "atendemos todo o estado" },
 ];
 
 export function TrustBar() {
