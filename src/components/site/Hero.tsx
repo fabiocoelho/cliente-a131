@@ -77,9 +77,9 @@ export function Hero() {
               ))}
             </div>
             <p className="mt-2 text-sm text-foreground">
-              "Resolveu tudo em tempo recorde. Super recomendo."
+              "Depoimento de exemplo: resolveu tudo em tempo recorde."
             </p>
-            <p className="mt-1 text-xs text-muted-foreground">— Cliente Google</p>
+            <p className="mt-1 text-xs text-muted-foreground">— Cliente de exemplo</p>
           </div>
         </div>
       </div>

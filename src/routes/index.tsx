@@ -12,22 +12,22 @@ import { MapContact } from "@/components/site/MapContact";
 import { FinalCta } from "@/components/site/FinalCta";
 import { Footer } from "@/components/site/Footer";
 import { WhatsAppFab } from "@/components/site/WhatsAppFab";
+import { SITE } from "@/lib/site";
 
-const TITLE = "Alessandro Despachante em Porto Alegre/RS — Atendimento rápido";
-const DESCRIPTION =
-  "Alessandro Despachante em Porto Alegre/RS: transferência de veículo, CNH, licenciamento e mais. Atendimento rápido pelo WhatsApp (51) 98405-7842.";
+const TITLE = `${SITE.name} — Despachante em ${SITE.cityState}`;
+const DESCRIPTION = `${SITE.name}, despachante em ${SITE.cityState}: transferência de veículo, CNH, licenciamento e mais. Atendimento rápido pelo WhatsApp ${SITE.phoneDisplay}.`;
 
 const jsonLd = {
   "@context": "https://schema.org",
   "@type": "LocalBusiness",
-  name: "Alessandro Despachante",
+  name: SITE.name,
   description: DESCRIPTION,
-  telephone: "+55 51 98405-7842",
-  areaServed: "Porto Alegre, RS",
+  telephone: `+${SITE.phoneRaw}`,
+  areaServed: SITE.cityState,
   address: {
     "@type": "PostalAddress",
-    addressLocality: "Porto Alegre",
-    addressRegion: "RS",
+    addressLocality: SITE.city,
+    addressRegion: SITE.state,
     addressCountry: "BR",
   },
   openingHoursSpecification: [

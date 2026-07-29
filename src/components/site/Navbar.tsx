@@ -3,7 +3,7 @@ import { Menu } from "lucide-react";
 import { Sheet, SheetContent, SheetTrigger, SheetTitle } from "@/components/ui/sheet";
 import { WhatsAppButton } from "./WhatsAppButton";
 import { cn } from "@/lib/utils";
-import { SITE } from "@/lib/site";
+import { SITE, SITE_INITIAL } from "@/lib/site";
 
 const links = [
   { href: "#servicos", label: "Serviços" },
@@ -41,7 +41,7 @@ export function Navbar() {
           aria-label={SITE.name}
         >
           <span className="grid h-9 w-9 shrink-0 place-items-center rounded-full bg-brand text-brand-foreground font-display text-lg leading-none">
-            A
+            {SITE_INITIAL}
           </span>
           <span className="truncate font-display text-lg tracking-tight text-foreground">
             {SITE.name}

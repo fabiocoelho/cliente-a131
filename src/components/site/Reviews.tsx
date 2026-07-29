@@ -1,29 +1,30 @@
 import { Star } from "lucide-react";
 
+/* TEMPLATE — depoimentos de exemplo. Substituir pelos depoimentos reais do cliente. */
 const reviews = [
   {
-    name: "Carla M.",
-    text: "Atendimento impecável. Resolveu a transferência do meu carro em poucos dias, sem que eu precisasse ir a lugar nenhum.",
+    name: "Cliente 1",
+    text: "Depoimento de exemplo: atendimento rápido e sem complicação, tudo resolvido no prazo combinado.",
   },
   {
-    name: "Rodrigo S.",
-    text: "Sério, profissional e muito rápido. Recomendo de olhos fechados para qualquer serviço de despachante.",
+    name: "Cliente 2",
+    text: "Depoimento de exemplo: comunicação clara em cada etapa e preço combinado desde o início.",
   },
   {
-    name: "Fernanda L.",
-    text: "Explicou cada passo com clareza. Me passou tranquilidade do início ao fim. Voltarei a usar sempre.",
+    name: "Cliente 3",
+    text: "Depoimento de exemplo: enviei os documentos pelo celular e recebi tudo pronto, sem precisar sair de casa.",
   },
   {
-    name: "Bruno A.",
-    text: "Consegui renovar minha CNH sem estresse. Preço justo e prazo cumprido à risca.",
+    name: "Cliente 4",
+    text: "Depoimento de exemplo: equipe atenciosa, explicou todas as dúvidas com paciência.",
   },
   {
-    name: "Patrícia R.",
-    text: "Excelente! Resolveu um problema antigo com débitos do meu veículo que ninguém conseguia resolver.",
+    name: "Cliente 5",
+    text: "Depoimento de exemplo: resolveu uma pendência antiga que eu não conseguia resolver sozinho.",
   },
   {
-    name: "Marcelo T.",
-    text: "Comunicação por WhatsApp muito ágil. Enviei os documentos e recebi tudo pronto em casa.",
+    name: "Cliente 6",
+    text: "Depoimento de exemplo: processo simples, transparente e com retorno muito rápido.",
   },
 ];
 

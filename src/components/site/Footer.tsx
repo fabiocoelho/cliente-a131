@@ -1,4 +1,4 @@
-import { SITE, whatsappUrl } from "@/lib/site";
+import { SITE, SITE_INITIAL, whatsappUrl } from "@/lib/site";
 
 export function Footer() {
   const links = [
@@ -17,7 +17,7 @@ export function Footer() {
           <div>
             <div className="flex items-center gap-2">
               <span className="grid h-9 w-9 place-items-center rounded-full bg-brand text-brand-foreground font-display text-lg leading-none">
-                A
+                {SITE_INITIAL}
               </span>
               <span className="font-display text-lg text-foreground">{SITE.name}</span>
             </div>
