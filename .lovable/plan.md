@@ -1,41 +1,47 @@
 ## Objetivo
 
-Trazer o código de `fabiocoelho/cliente-b132` (React + Vite + TypeScript + Tailwind) para este projeto, adaptando ao stack atual (TanStack Start + Tailwind v4).
+Deixar o site pronto como template: nenhum dado real do cliente no código, tudo em placeholders óbvios e fáceis de substituir depois; manter as fontes atuais (Space Grotesk + DM Sans) e aplicar a paleta Marinho + Coral.
 
-## Etapas
+## 1. Centralizar e neutralizar os dados
 
-1. **Conectar o GitHub**
-   Abro o card de conexão do conector GitHub. Você autoriza a conta que tem acesso ao repositório (privado ou público).
+Todos os dados sensíveis passam a viver só em `src/lib/site.ts`, com placeholders genéricos:
 
-2. **Inventariar o repositório**
-   Leio a árvore de arquivos e o `package.json` para mapear: páginas/rotas, componentes, estilos, assets, dependências e se há backend (Supabase, APIs, variáveis de ambiente).
+- Nome: `Nome da Empresa`
+- Cidade/Estado: `Cidade/UF`
+- Endereço: `Rua Exemplo, 000 — Bairro, Cidade/UF`
+- WhatsApp/Telefone exibido: `(00) 00000-0000` (raw `5500000000000`)
+- E-mail: `contato@empresa.com.br`
+- Horário: `Segunda a Sexta, 9h às 18h`
+- Busca no mapa: `Porto Alegre, RS`
 
-3. **Instalar dependências equivalentes**
-   Adiciono as libs usadas pelo repo que ainda não existem aqui (shadcn/ui, ícones, forms, etc.), descartando as que conflitam com o stack atual.
+Comentário no topo do arquivo indicando que é o único ponto a editar na entrega ao cliente.
 
-4. **Copiar componentes e assets**
-   Trago `src/components`, `src/lib`, hooks e imagens praticamente como estão, ajustando apenas imports e caminhos `@/`.
+Ajustes nos componentes que ainda têm texto fixo:
 
-5. **Adaptar as rotas**
-   O repo provavelmente usa React Router (`src/pages` + `App.tsx`). Aqui as rotas vivem em `src/routes/*.tsx` com TanStack Router. Converto cada página em um arquivo de rota, troco `<Link to>`/`useNavigate` pelos equivalentes do TanStack, e movo o layout compartilhado para `__root.tsx`. A home vira `src/routes/index.tsx` (substituindo o placeholder).
+- Logo do Navbar/Footer: inicial derivada do nome do site em vez do "A" fixo.
+- `src/routes/index.tsx`: título, descrição, canonical e JSON-LD passam a ser montados a partir de `SITE` (sem nome/telefone reais escritos no arquivo).
+- Alt das imagens e nomes de arquivos de imagem seguem como estão (imagens genéricas de escritório/vistoria).
 
-6. **Migrar os estilos**
-   Porto as variáveis de tema e fontes do `index.css`/`tailwind.config.ts` do repo para o `src/styles.css` (Tailwind v4, tokens em `@theme`). Fontes externas entram via `<link>` no `__root.tsx`.
+## 2. Nova paleta — Marinho + Coral
 
-7. **Backend, se houver**
-   Se o repo usar Supabase ou chaves de API, habilito o Lovable Cloud, recrio o schema por migração e movo chamadas server-side para server functions. Segredos entram pelo gerenciador de segredos, nunca no código.
+Tokens em `src/styles.css` (sem cores hardcoded nos componentes):
 
-8. **Verificar**
-   Build/typecheck, navegação por todas as rotas no preview e correção do que quebrar na conversão.
+```text
+background   #F7F4F1 (off-white quente)
+foreground   #101B33 (marinho profundo)
+primary      #101B33  → primary-foreground #F7F4F1
+brand        #FF6B5A (coral) → brand-foreground #101B33
+brand-soft   coral bem claro (fundo de halo/badge)
+secondary    marinho #22366B a 6% sobre o off-white
+muted-fg     marinho dessaturado
+border/input marinho a ~12%
+ring         coral
+```
+
+Também atualizo `--chart-*`, tokens de sidebar e as sombras `--shadow-elegant`/`--shadow-soft` para tingirem em marinho em vez de preto puro. Fontes permanecem inalteradas.
 
 ## Detalhes técnicos
 
-- Arquivos incompatíveis não são copiados: `vite.config.ts`, `main.tsx`, `App.tsx`, `index.html`, `tailwind.config.ts`, roteador antigo.
-- `react-router-dom` não será instalado; todo roteamento usa `@tanstack/react-router`.
-- Metadados de SEO de cada página são reescritos no `head()` de cada rota.
-
-## Limitações
-
-- Não é um clone byte a byte: a camada de roteamento e build é reescrita.
-- Histórico de commits e branches do repo original não vêm junto.
-- Se o repo for grande, priorizo páginas e componentes principais primeiro e sigo em lotes.
+- Valores de cor em `oklch`, seguindo o padrão atual do arquivo.
+- Nenhuma mudança estrutural de layout, seções ou rotas.
+- Verificação final: build/typecheck limpos e revisão do preview para contraste (coral sobre marinho e coral sobre off-white).
