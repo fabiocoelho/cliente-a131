@@ -94,7 +94,7 @@ export function Hero() {
 
           <div className="hero-float absolute -top-5 -right-3 hidden items-center gap-3 rounded-2xl border border-border bg-background px-4 py-3 shadow-[var(--shadow-elegant)] lg:flex">
             <span className="flex h-9 w-9 items-center justify-center rounded-full bg-brand-soft">
-              <ShieldCheck className="h-4.5 w-4.5 text-brand" strokeWidth={2} />
+              <ShieldCheck className="h-4 w-4 text-brand" strokeWidth={2} />
             </span>
             <div>
               <div className="font-display text-lg leading-none text-foreground">+0.000</div>
