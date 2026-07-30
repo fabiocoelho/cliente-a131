@@ -4,7 +4,7 @@
  * Substitua os placeholders abaixo (nome, cidade, telefone, e-mail, endereço).
  */
 export const SITE = {
-  name: "Nome da Empresaa",
+  name: "Nome da Empresa",
   city: "Cidade",
   state: "UF",
   cityState: "Cidade/UF",
