@@ -1,47 +1,40 @@
 ## Objetivo
 
-Deixar o site pronto como template: nenhum dado real do cliente no código, tudo em placeholders óbvios e fáceis de substituir depois; manter as fontes atuais (Space Grotesk + DM Sans) e aplicar a paleta Marinho + Coral.
+Enriquecer a seção Hero com movimento sutil e elementos visuais, mantendo o visual corporativo limpo (Marinho + Coral, Space Grotesk + DM Sans) e sem dados reais de cliente.
 
-## 1. Centralizar e neutralizar os dados
+## Abordagem de animação
 
-Todos os dados sensíveis passam a viver só em `src/lib/site.ts`, com placeholders genéricos:
+Usar CSS puro via tokens do `src/styles.css` + utilitários Tailwind (o projeto já tem `tw-animate-css`), **sem instalar Framer Motion**. Motivo: a Hero é conteúdo above-the-fold; animações CSS não adicionam JS ao bundle nem atrasam o LCP no mobile. Se preferir Framer Motion mesmo assim, é só dizer.
 
-- Nome: `Nome da Empresa`
-- Cidade/Estado: `Cidade/UF`
-- Endereço: `Rua Exemplo, 000 — Bairro, Cidade/UF`
-- WhatsApp/Telefone exibido: `(00) 00000-0000` (raw `5500000000000`)
-- E-mail: `contato@empresa.com.br`
-- Horário: `Segunda a Sexta, 9h às 18h`
-- Busca no mapa: `Porto Alegre, RS`
+## 1. Badge de destaque
 
-Comentário no topo do arquivo indicando que é o único ponto a editar na entrega ao cliente.
+Refinar o badge existente acima do título:
+- Ícone sutil (`Zap` ou `ShieldCheck` do lucide) em coral, texto tipo "Resposta em minutos pelo WhatsApp" (placeholder genérico).
+- Pílula com borda, fundo `brand-soft/50`, ponto pulsante discreto.
 
-Ajustes nos componentes que ainda têm texto fixo:
+## 2. Prova social flutuante
 
-- Logo do Navbar/Footer: inicial derivada do nome do site em vez do "A" fixo.
-- `src/routes/index.tsx`: título, descrição, canonical e JSON-LD passam a ser montados a partir de `SITE` (sem nome/telefone reais escritos no arquivo).
-- Alt das imagens e nomes de arquivos de imagem seguem como estão (imagens genéricas de escritório/vistoria).
+Ao lado/sobre a imagem:
+- Card inferior-esquerdo (já existe): avaliação em estrelas + depoimento de exemplo — mantido e refinado.
+- Novo card superior-direito: métrica curta (ex.: "+0.000 atendimentos" / "0.0 no Google", coerente com os placeholders do TrustBar), com ícone e sombra `--shadow-elegant`.
+- Ambos ganham flutuação lenta em loop (`translateY` de ~6px, 6s, alternada) e ficam ocultos em telas pequenas para não poluir o mobile.
 
-## 2. Nova paleta — Marinho + Coral
+## 3. Entrada escalonada
 
-Tokens em `src/styles.css` (sem cores hardcoded nos componentes):
+Nova keyframe `fade-up` em `src/styles.css` + utilitário com `animation-delay` por etapa (badge → título → parágrafo → botões → provas → imagem), passos de ~80ms, `animation-fill-mode: both` para não haver flash.
 
-```text
-background   #F7F4F1 (off-white quente)
-foreground   #101B33 (marinho profundo)
-primary      #101B33  → primary-foreground #F7F4F1
-brand        #FF6B5A (coral) → brand-foreground #101B33
-brand-soft   coral bem claro (fundo de halo/badge)
-secondary    marinho #22366B a 6% sobre o off-white
-muted-fg     marinho dessaturado
-border/input marinho a ~12%
-ring         coral
-```
+## 4. Hover na imagem
 
-Também atualizo `--chart-*`, tokens de sidebar e as sombras `--shadow-elegant`/`--shadow-soft` para tingirem em marinho em vez de preto puro. Fontes permanecem inalteradas.
+Wrapper com `group`: no hover, `scale-[1.03]` na imagem (transição ~700ms, `overflow-hidden` no card), leve elevação da sombra e intensificação do halo coral atrás.
+
+## 5. Mobile e acessibilidade
+
+- Cards flutuantes só a partir de `sm`/`lg`; halo e blur reduzidos no mobile.
+- `@media (prefers-reduced-motion: reduce)`: desliga todas as animações e loops.
+- Imagem mantém `width`/`height` e `fetchPriority="high"`; nenhum JS novo.
 
 ## Detalhes técnicos
 
-- Valores de cor em `oklch`, seguindo o padrão atual do arquivo.
-- Nenhuma mudança estrutural de layout, seções ou rotas.
-- Verificação final: build/typecheck limpos e revisão do preview para contraste (coral sobre marinho e coral sobre off-white).
+- Arquivos alterados: `src/components/site/Hero.tsx` e `src/styles.css` (keyframes/utilities).
+- Sem cores hardcoded: apenas tokens (`brand`, `brand-soft`, `border`, `muted-foreground`).
+- Verificação: build/typecheck limpos e screenshot do preview em mobile e desktop.
