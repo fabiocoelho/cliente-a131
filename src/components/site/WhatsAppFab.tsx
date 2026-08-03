@@ -15,7 +15,7 @@ export function WhatsAppFab() {
 
   return (
     <a
-      href={whatsappUrl("Olá! Cheguei pelo site e gostaria de mais informações.")}
+      href={whatsappUrl()}
       target="_blank"
       rel="noopener noreferrer"
       aria-label="Falar no WhatsApp"

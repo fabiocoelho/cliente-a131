@@ -2,6 +2,7 @@ import { Star, MapPin, Clock, ArrowRight, Zap, ShieldCheck } from "lucide-react"
 import heroImage from "@/assets/Vistoria.jpeg";
 import { WhatsAppButton } from "./WhatsAppButton";
 import { SITE } from "@/lib/site";
+import { useParallax } from "@/hooks/use-parallax";
 
 export function Hero() {
   const proofs = [
@@ -9,10 +10,14 @@ export function Hero() {
     { icon: MapPin, label: `Atendimento em ${SITE.cityState}` },
     { icon: Clock, label: "Atendimento rápido" },
   ];
+  const parallaxRef = useParallax<HTMLDivElement>(26);
 
   return (
-    <section id="top" className="relative overflow-hidden pt-32 pb-20 sm:pt-40 sm:pb-28">
-      <div className="mx-auto grid max-w-7xl gap-14 px-5 sm:px-8 lg:grid-cols-[1.05fr_1fr] lg:items-center lg:gap-16">
+    <section
+      id="top"
+      className="relative overflow-hidden pt-32 pb-20 sm:pt-40 sm:pb-28 lg:flex lg:min-h-[100svh] lg:items-center lg:pt-28 lg:pb-14"
+    >
+      <div className="mx-auto grid w-full max-w-7xl gap-14 px-5 sm:px-8 lg:grid-cols-[1.05fr_1fr] lg:items-center lg:gap-12">
         <div className="max-w-2xl">
           <div
             className="hero-in inline-flex items-center gap-2 rounded-full border border-border bg-brand-soft/50 px-3 py-1.5 text-xs font-medium text-foreground shadow-[var(--shadow-soft)]"
@@ -27,14 +32,14 @@ export function Hero() {
           </div>
 
           <h1
-            className="hero-in mt-6 font-display text-4xl leading-[1.05] tracking-tight text-foreground sm:text-6xl lg:text-[4.25rem]"
+            className="hero-in mt-6 font-display text-4xl leading-[1.05] tracking-tight text-foreground sm:text-6xl lg:mt-5 lg:text-[3.25rem] lg:leading-[1.03] xl:text-[3.75rem]"
             style={{ animationDelay: "80ms" }}
           >
             Documentação do seu veículo, sem burocracia.
           </h1>
 
           <p
-            className="hero-in mt-6 max-w-xl text-base leading-relaxed text-muted-foreground sm:text-lg"
+            className="hero-in mt-6 max-w-xl text-base leading-relaxed text-muted-foreground sm:text-lg lg:mt-4 lg:text-base"
             style={{ animationDelay: "160ms" }}
           >
             {SITE.name} cuida de transferências, licenciamento, CNH e mais em{" "}
@@ -42,13 +47,10 @@ export function Hero() {
           </p>
 
           <div
-            className="hero-in mt-8 flex flex-wrap items-center gap-3"
+            className="hero-in mt-8 flex flex-wrap items-center gap-3 lg:mt-6"
             style={{ animationDelay: "240ms" }}
           >
-            <WhatsAppButton
-              size="lg"
-              message={`Olá, ${SITE.name}! Vi o site e gostaria de tirar uma dúvida.`}
-            >
+            <WhatsAppButton size="lg">
               Falar pelo WhatsApp
             </WhatsAppButton>
             <a
@@ -61,7 +63,7 @@ export function Hero() {
           </div>
 
           <ul
-            className="hero-in mt-10 flex flex-wrap items-center gap-x-6 gap-y-3"
+            className="hero-in mt-10 flex flex-wrap items-center gap-x-6 gap-y-3 lg:mt-7"
             style={{ animationDelay: "320ms" }}
           >
             {proofs.map((p) => (
@@ -81,15 +83,24 @@ export function Hero() {
           style={{ animationDelay: "400ms" }}
         >
           <div className="absolute -inset-6 -z-10 hidden rounded-[2rem] bg-brand-soft/60 blur-2xl transition-opacity duration-700 group-hover:opacity-100 sm:block sm:opacity-70" />
-          <div className="relative overflow-hidden rounded-[1.75rem] border border-border shadow-[var(--shadow-soft)] transition-shadow duration-500 group-hover:shadow-[var(--shadow-elegant)]">
-            <img
-              src={heroImage}
-              alt={`${SITE.name} — despachante em ${SITE.cityState}`}
-              width={1200}
-              height={1400}
-              className="h-full w-full object-cover transition-transform duration-700 ease-out group-hover:scale-[1.03] motion-reduce:transform-none"
-              fetchPriority="high"
-            />
+          <div className="relative overflow-hidden rounded-[1.75rem] border border-border shadow-[var(--shadow-soft)] transition-shadow duration-500 group-hover:shadow-[var(--shadow-elegant)] lg:max-h-[calc(100svh-13rem)]">
+            <div
+              ref={parallaxRef}
+              className="h-full w-full will-change-transform"
+              style={{
+                transform: "translate3d(0, var(--parallax-y, 0px), 0) scale(1.08)",
+                backfaceVisibility: "hidden",
+              }}
+            >
+              <img
+                src={heroImage}
+                alt={`${SITE.name} — despachante em ${SITE.cityState}`}
+                width={1200}
+                height={1400}
+                className="h-full w-full object-cover"
+                fetchPriority="high"
+              />
+            </div>
           </div>
 
           <div className="hero-float absolute -top-5 -right-3 hidden items-center gap-3 rounded-2xl border border-border bg-background px-4 py-3 shadow-[var(--shadow-elegant)] will-change-transform lg:flex">

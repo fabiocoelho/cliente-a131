@@ -4,17 +4,22 @@
  * Substitua os placeholders abaixo (nome, cidade, telefone, e-mail, endereço).
  */
 export const SITE = {
-  name: "Nome da Empresa",
-  city: "Cidade",
-  state: "UF",
-  cityState: "Cidade/UF",
-  phoneDisplay: "(00) 00000-0000",
-  phoneRaw: "5500000000000",
-  telHref: "tel:+5500000000000",
-  email: "contato@empresa.com.br",
-  address: "Rua Exemplo, 000 — Bairro, Cidade/UF",
+  name: "GetSite",
+  city: "Porto Alegre",
+  state: "RS",
+  cityState: "Porto Alegre/RS",
+  phoneDisplay: "(51) 98057-3087",
+  phoneRaw: "5551980573087",
+  telHref: "tel:+5551980573087",
+  email: "contato@getsite.com.br",
+  address: "Rua Barão do Amazonas, 353 — Petrópolis, Porto Alegre/RS",
   hours: "Segunda a Sexta, 9h às 18h",
-  mapsQuery: "Porto Alegre, RS",
+  mapsQuery: "Rua Barão do Amazonas, 353 - Petrópolis, Porto Alegre - RS",
+  /** Mensagem padrão usada em TODOS os botões de WhatsApp do site. */
+  whatsappMessage: "Oi Fábio! Vi o site e gostaria de tirar uma dúvida.",
+  /** Mensagem usada nos cards de serviço. */
+  whatsappServiceMessage: (servico: string) =>
+    `Oi Fábio! Vi o site e gostaria de tirar uma dúvida sobre o serviço: ${servico}.`,
 };
 
 /** Inicial usada no logotipo (derivada do nome). */
@@ -22,6 +27,7 @@ export const SITE_INITIAL = SITE.name.trim().charAt(0).toUpperCase();
 
 export function whatsappUrl(message?: string) {
   const base = `https://wa.me/${SITE.phoneRaw}`;
-  if (!message) return base;
-  return `${base}?text=${encodeURIComponent(message)}`;
+  const text = message ?? SITE.whatsappMessage;
+  if (!text) return base;
+  return `${base}?text=${encodeURIComponent(text)}`;
 }

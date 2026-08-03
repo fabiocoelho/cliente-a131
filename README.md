@@ -1,14 +1,14 @@
-# Client Import Hub
+# Repo Sync Hub
 
-Importar o repositório fabiocoelho/cliente-b132 do GitHub para este projeto.
+Importar o repositório do GitHub para este projeto.
 
 This project was built with [Lovable](https://lovable.dev).
 
-**Live app**: https://lovable-source-link.lovable.app
+**Live app**: https://my-repo-dear.lovable.app
 
 ## Build with Lovable
 
-Continue developing this project in the [Lovable editor](https://lovable.dev/projects/a1fc184a-57c3-4c49-937b-8d5c5d580e10).
+Continue developing this project in the [Lovable editor](https://lovable.dev/projects/e40b707b-c989-45a2-9cfc-cc8d4bb2c066).
 
 - **Ship faster**: describe what you want to build and Lovable handles the code.
 - **Stay in sync**: every change made in Lovable is committed straight to this repository.

@@ -7,9 +7,9 @@ import {
   ClipboardCheck,
   ArrowUpRight,
   Search,
+  ArrowRight,
 } from "lucide-react";
-import { WhatsAppButton } from "./WhatsAppButton";
-import { SITE } from "@/lib/site";
+import { SITE, whatsappUrl } from "@/lib/site";
 
 const services = [
   {
@@ -84,16 +84,16 @@ export function Services() {
               <p className="mt-2 text-sm leading-relaxed text-muted-foreground">
                 {s.description}
               </p>
-              <div className="mt-6 flex-1" />
-              <WhatsAppButton
-                variant="ghost"
-                size="sm"
-                className="justify-start !px-0 hover:!bg-transparent text-foreground group-hover:text-brand"
-                showIcon={false}
-                message={`Olá! Gostaria de solicitar o serviço: ${s.title}.`}
+              <div className="flex-1" />
+              <a
+                href={whatsappUrl(SITE.whatsappServiceMessage(s.title))}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="mt-6 inline-flex items-center gap-1.5 self-start text-sm font-medium text-foreground transition-colors group-hover:text-brand"
               >
-                Solicitar atendimento →
-              </WhatsAppButton>
+                Solicitar atendimento
+                <ArrowRight className="h-4 w-4 transition-transform duration-300 group-hover:translate-x-1" />
+              </a>
             </article>
           ))}
         </div>

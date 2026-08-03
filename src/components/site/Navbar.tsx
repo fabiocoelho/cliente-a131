@@ -62,10 +62,7 @@ export function Navbar() {
           </nav>
 
           <div className="hidden sm:block">
-            <WhatsAppButton
-              size="sm"
-              message={`Olá! Cheguei pelo site do ${SITE.name} e gostaria de mais informações.`}
-            >
+            <WhatsAppButton size="sm">
               WhatsApp
             </WhatsAppButton>
           </div>
@@ -93,11 +90,7 @@ export function Navbar() {
                   ))}
                 </nav>
                 <div className="mt-6">
-                  <WhatsAppButton
-                    size="lg"
-                    className="w-full"
-                    message={`Olá! Cheguei pelo site do ${SITE.name} e gostaria de mais informações.`}
-                  >
+                  <WhatsAppButton size="lg" className="w-full">
                     Falar pelo WhatsApp
                   </WhatsAppButton>
                 </div>

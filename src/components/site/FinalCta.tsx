@@ -16,10 +16,7 @@ export function FinalCta() {
               rápido, humano e sem burocracia.
             </p>
             <div className="mt-8 flex justify-center">
-              <WhatsAppButton
-                size="lg"
-                message={`Olá, ${SITE.name}! Quero resolver meu problema. Pode me ajudar?`}
-              >
+              <WhatsAppButton size="lg">
                 Falar pelo WhatsApp
               </WhatsAppButton>
             </div>

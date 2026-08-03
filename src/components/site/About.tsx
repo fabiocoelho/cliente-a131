@@ -42,11 +42,7 @@ export function About() {
           </div>
 
           <div className="mt-8">
-            <WhatsAppButton
-              variant="dark"
-              size="md"
-              message={`Olá, ${SITE.name}! Gostaria de conhecer melhor o trabalho de vocês.`}
-            >
+            <WhatsAppButton variant="dark" size="md">
               Fale com a gente
             </WhatsAppButton>
           </div>
