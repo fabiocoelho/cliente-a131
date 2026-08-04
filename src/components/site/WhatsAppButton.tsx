@@ -1,6 +1,6 @@
 import { MessageCircle } from "lucide-react";
 
-export function WhatsAppFloat() {
+export function WhatsAppButton() {
   const whatsappUrl = "https://wa.me/5551980573087?text=Ol%C3%A1!%20Gostaria%20de%20mais%20informa%C3%A7%C3%B5es.";
 
   return (
@@ -28,4 +28,4 @@ export function WhatsAppFloat() {
   );
 }
 
-export default WhatsAppFloat;
+export default WhatsAppButton;
