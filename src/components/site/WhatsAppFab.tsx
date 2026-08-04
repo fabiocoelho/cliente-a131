@@ -16,33 +16,25 @@ export function WhatsAppFab() {
   return (
     <div
       className={cn(
-        "fixed bottom-5 right-5 z-50 flex items-center gap-3 transition-all duration-300",
-        visible ? "opacity-100" : "pointer-events-none opacity-0 translate-y-2",
+        "group fixed bottom-5 right-5 z-40 flex items-center gap-3 transition-all duration-300",
+        visible ? "opacity-100" : "pointer-events-none translate-y-2 opacity-0",
       )}
     >
       <span
-        className={cn(
-          "pointer-events-none absolute right-full mr-3 whitespace-nowrap rounded-full border border-gray-100 bg-white px-4 py-2 text-sm font-medium text-gray-800 shadow-md",
-          "opacity-0 transition-opacity duration-300",
-          "group-hover:opacity-100",
-        )}
-        aria-hidden="true"
+        role="tooltip"
+        className="pointer-events-none hidden translate-x-2 rounded-full bg-card px-3 py-1.5 text-sm font-medium text-foreground shadow-[var(--shadow-elegant)] opacity-0 transition-all duration-300 group-hover:translate-x-0 group-hover:opacity-100 sm:block"
       >
-        Fale Comigo!
+        Fale comigo!
       </span>
-
       <a
         href={whatsappUrl()}
         target="_blank"
         rel="noopener noreferrer"
         aria-label="Falar no WhatsApp"
-        className="group relative grid h-14 w-14 place-items-center rounded-full bg-[#25D366] text-white shadow-lg transition-transform duration-200 hover:scale-105"
+        title="Fale comigo!"
+        className="grid h-14 w-14 place-items-center rounded-full bg-brand text-brand-foreground shadow-[var(--shadow-elegant)] transition-transform duration-300 hover:scale-105"
       >
-        <span
-          className="absolute inset-0 -z-10 rounded-full bg-[#25D366] opacity-75 animate-ping"
-          aria-hidden="true"
-        />
-        <MessageCircle className="h-7 w-7 fill-current" strokeWidth={2} />
+        <MessageCircle className="h-6 w-6" strokeWidth={2} />
       </a>
     </div>
   );

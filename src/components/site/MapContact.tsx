@@ -6,30 +6,33 @@ export function MapContact() {
   const mapsLink = `https://www.google.com/maps/dir/?api=1&destination=${encodeURIComponent(SITE.mapsQuery)}`;
 
   return (
-    <section id="contato" className="py-24 sm:py-32">
-      <div className="mx-auto max-w-7xl px-5 sm:px-8">
+    <section
+      id="contato"
+      className="flex flex-col justify-center py-20 sm:py-24 lg:min-h-screen lg:py-12"
+    >
+      <div className="mx-auto w-full max-w-7xl px-5 sm:px-8">
         <div className="max-w-2xl">
           <span className="text-xs font-medium uppercase tracking-widest text-brand">
             Contato
           </span>
-          <h2 className="mt-3 font-display text-3xl tracking-tight text-foreground sm:text-5xl">
+          <h2 className="mt-3 font-display text-3xl tracking-tight text-foreground sm:text-5xl lg:text-4xl xl:text-5xl">
             Estamos em {SITE.cityState}.
           </h2>
         </div>
 
-        <div className="mt-12 grid gap-6 lg:grid-cols-[1.4fr_1fr]">
+        <div className="mt-8 grid gap-6 lg:mt-10 lg:grid-cols-[1.4fr_1fr]">
           <div className="card-surface overflow-hidden rounded-2xl">
             <iframe
               title={`Mapa — ${SITE.name}`}
               src={mapsEmbed}
               loading="lazy"
-              className="h-[420px] w-full"
+              className="h-[320px] w-full lg:h-full lg:min-h-[380px]"
               referrerPolicy="no-referrer-when-downgrade"
             />
           </div>
 
-          <div className="card-surface flex flex-col justify-between rounded-2xl bg-card p-8">
-            <ul className="space-y-6">
+          <div className="card-surface flex flex-col justify-between rounded-2xl bg-card p-8 lg:p-6">
+            <ul className="space-y-6 lg:space-y-4">
               <li className="flex gap-4">
                 <MapPin className="mt-0.5 h-5 w-5 shrink-0 text-brand" strokeWidth={1.75} />
                 <div className="min-w-0">
@@ -68,7 +71,7 @@ export function MapContact() {
               href={mapsLink}
               target="_blank"
               rel="noopener noreferrer"
-              className="mt-8 inline-flex h-12 items-center justify-center gap-2 rounded-full bg-primary px-6 text-sm font-medium text-primary-foreground transition-colors hover:bg-primary/90"
+              className="mt-8 inline-flex h-12 items-center justify-center gap-2 rounded-full bg-primary px-6 text-sm font-medium text-primary-foreground transition-colors hover:bg-primary/90 lg:mt-6 lg:h-11"
             >
               <Navigation className="h-4 w-4" />
               Como chegar

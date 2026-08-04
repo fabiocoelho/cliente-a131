@@ -49,9 +49,13 @@ export function Faq() {
           </p>
         </div>
 
-        <Accordion type="single" collapsible className="w-full">
+        <Accordion type="single" collapsible className="flex w-full flex-col gap-3">
           {faqs.map((f, i) => (
-            <AccordionItem key={i} value={`item-${i}`} className="border-border">
+            <AccordionItem
+              key={i}
+              value={`item-${i}`}
+              className="card-surface rounded-2xl border-b-0 bg-background px-5"
+            >
               <AccordionTrigger className="py-5 text-left font-display text-lg text-foreground hover:no-underline">
                 {f.q}
               </AccordionTrigger>
