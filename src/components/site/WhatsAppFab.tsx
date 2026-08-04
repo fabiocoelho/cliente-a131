@@ -14,17 +14,28 @@ export function WhatsAppFab() {
   }, []);
 
   return (
-    <a
-      href={whatsappUrl()}
-      target="_blank"
-      rel="noopener noreferrer"
-      aria-label="Falar no WhatsApp"
-      className={cn(
-        "fixed bottom-5 right-5 z-40 grid h-14 w-14 place-items-center rounded-full bg-brand text-brand-foreground shadow-[var(--shadow-elegant)] transition-all duration-300 hover:scale-105",
-        visible ? "opacity-100" : "pointer-events-none opacity-0 translate-y-2",
-      )}
-    >
-      <MessageCircle className="h-6 w-6" strokeWidth={2} />
-    </a>
+    <div className="group fixed bottom-5 right-5 z-40">
+      <span
+        className={cn(
+          "absolute right-full top-1/2 z-40 mr-3 -translate-y-1/2 translate-x-2 whitespace-nowrap rounded-full bg-brand px-3.5 py-1.5 text-xs font-medium text-brand-foreground opacity-0 shadow-[var(--shadow-soft)] transition-all duration-300 ease-in-out group-hover:translate-x-0 group-hover:opacity-100",
+          visible ? "pointer-events-none" : "pointer-events-none opacity-0",
+        )}
+        aria-hidden="true"
+      >
+        Fale comigo!
+      </span>
+      <a
+        href={whatsappUrl()}
+        target="_blank"
+        rel="noopener noreferrer"
+        aria-label="Falar no WhatsApp"
+        className={cn(
+          "grid h-14 w-14 place-items-center rounded-full bg-brand text-brand-foreground shadow-[var(--shadow-elegant)] transition-all duration-300 hover:scale-105",
+          visible ? "opacity-100" : "pointer-events-none opacity-0 translate-y-2",
+        )}
+      >
+        <MessageCircle className="h-6 w-6" strokeWidth={2} />
+      </a>
+    </div>
   );
 }
