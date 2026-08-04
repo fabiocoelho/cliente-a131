@@ -75,6 +75,11 @@
   --brand-foreground: oklch(0.235 0.045 265);
   --brand-soft: oklch(0.945 0.035 30);
 
+  /* WhatsApp green */
+  --whatsapp: oklch(0.72 0.22 145);
+  --whatsapp-foreground: oklch(1 0 0);
+  --whatsapp-soft: oklch(0.72 0.22 145 / 0.25);
+
   /* Primary = marinho profundo */
   --primary: oklch(0.235 0.045 265);
   --primary-foreground: oklch(0.972 0.005 70);
