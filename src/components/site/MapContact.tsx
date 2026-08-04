@@ -18,7 +18,7 @@ export function MapContact() {
         </div>
 
         <div className="mt-12 grid gap-6 lg:grid-cols-[1.4fr_1fr]">
-          <div className="overflow-hidden rounded-2xl border border-border shadow-[var(--shadow-soft)]">
+          <div className="card-surface overflow-hidden rounded-2xl">
             <iframe
               title={`Mapa — ${SITE.name}`}
               src={mapsEmbed}
@@ -28,7 +28,7 @@ export function MapContact() {
             />
           </div>
 
-          <div className="flex flex-col justify-between rounded-2xl border border-border bg-card p-8">
+          <div className="card-surface flex flex-col justify-between rounded-2xl bg-card p-8">
             <ul className="space-y-6">
               <li className="flex gap-4">
                 <MapPin className="mt-0.5 h-5 w-5 shrink-0 text-brand" strokeWidth={1.75} />

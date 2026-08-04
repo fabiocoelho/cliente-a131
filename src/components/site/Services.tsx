@@ -75,7 +75,7 @@ export function Services() {
           {services.map((s) => (
             <article
               key={s.title}
-              className="group flex flex-col rounded-2xl border border-border bg-card p-6 transition-all hover:-translate-y-0.5 hover:shadow-[var(--shadow-elegant)]"
+              className="card-surface group flex flex-col rounded-2xl bg-card p-6"
             >
               <div className="grid h-11 w-11 shrink-0 place-items-center rounded-xl bg-brand-soft text-brand">
                 <s.icon className="h-5 w-5" strokeWidth={1.75} />

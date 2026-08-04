@@ -38,7 +38,7 @@ export function HowItWorks() {
           {steps.map((s) => (
             <li
               key={s.n}
-              className="relative rounded-2xl border border-border bg-background p-6"
+              className="card-surface relative rounded-2xl bg-background p-6"
             >
               <div className="font-display text-4xl text-brand">{s.n}</div>
               <h3 className="mt-4 font-display text-xl text-foreground">{s.title}</h3>

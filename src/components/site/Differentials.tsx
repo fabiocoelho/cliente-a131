@@ -22,9 +22,9 @@ export function Differentials() {
           </h2>
         </div>
 
-        <div className="mt-14 grid gap-x-10 gap-y-12 sm:grid-cols-2 lg:grid-cols-3">
+        <div className="mt-14 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
           {items.map((i) => (
-            <div key={i.title} className="flex gap-4">
+            <div key={i.title} className="card-surface flex gap-4 rounded-2xl bg-card p-6">
               <div className="grid h-11 w-11 shrink-0 place-items-center rounded-xl bg-brand-soft">
                 <i.icon className="h-5 w-5 text-brand" strokeWidth={1.75} />
               </div>
