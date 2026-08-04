@@ -45,7 +45,7 @@ export function Reviews() {
           {reviews.map((r) => (
             <figure
               key={r.name}
-              className="flex flex-col rounded-2xl border border-border bg-background p-6"
+              className="card-surface flex flex-col rounded-2xl bg-background p-6"
             >
               <div className="flex items-center gap-1 text-brand">
                 {[...Array(5)].map((_, i) => (
