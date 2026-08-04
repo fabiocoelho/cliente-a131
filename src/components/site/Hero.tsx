@@ -54,8 +54,12 @@ export function Hero() {
               Falar pelo WhatsApp
             </WhatsAppButton>
             
-<a href="#servicos" className="group inline-flex h-14 items-center gap-2 rounded-full border-2 border-brand bg-background px-6 text-sm font-medium text-foreground transition-colors hover:bg-brand/10" >
-  Ver serviços <ArrowRight className="h-4 w-4 text-foreground transition-transform duration-300 group-hover:translate-x-1" />
+<a
+  href="#servicos"
+  className="group inline-flex h-14 items-center gap-2 rounded-full border-2 border-brand bg-background px-6 text-sm font-medium text-foreground transition-colors hover:bg-brand/10 hover:text-brand"
+>
+  Ver serviços
+  <ArrowRight className="h-4 w-4 text-foreground transition-colors transition-transform duration-300 group-hover:translate-x-1 group-hover:text-brand" />
 </a>
             
           </div>
