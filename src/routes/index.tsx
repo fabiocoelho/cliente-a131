@@ -11,7 +11,7 @@ import { Faq } from "@/components/site/Faq";
 import { MapContact } from "@/components/site/MapContact";
 import { FinalCta } from "@/components/site/FinalCta";
 import { Footer } from "@/components/site/Footer";
-import { WhatsAppFab } from "@/components/site/WhatsAppFab";
+import { WhatsAppButton } from "@/components/site/WhatsAppButton";
 import { SITE } from "@/lib/site";
 
 const TITLE = `${SITE.name} — Despachante em ${SITE.cityState}`;
