@@ -1,31 +1,62 @@
 import { MessageCircle } from "lucide-react";
+import { Button } from "@/components/ui/button";
+import { cn } from "@/lib/utils";
+import { whatsappUrl } from "@/lib/site";
 
-export function WhatsAppButton() {
-  const whatsappUrl = "https://wa.me/5551980573087?text=Ol%C3%A1!%20Gostaria%20de%20mais%20informa%C3%A7%C3%B5es.";
+type Variant = "brand" | "outline" | "ghost" | "dark";
+type Size = "sm" | "md" | "lg";
 
-  return (
-    <a
-      href={whatsappUrl}
-      target="_blank"
-      rel="noopener noreferrer"
-      className="group fixed right-5 bottom-5 z-50 flex items-center gap-3"
-      aria-label="Fale comigo no WhatsApp"
-    >
-      {/* Balão de Texto (Hover) */}
-      <span className="pointer-events-none rounded-full bg-white px-4 py-2 text-sm font-medium text-gray-800 opacity-0 shadow-md transition-opacity group-hover:opacity-100 border border-gray-100 hidden sm:inline-block">
-        Fale Comigo!
-      </span>
-
-      {/* Círculo do WhatsApp com Anel Pulsante */}
-      <span className="relative flex h-14 w-14 items-center justify-center rounded-full bg-[#25D366] shadow-lg transition-transform duration-300 group-hover:scale-110">
-        {/* Anel de Pulso / Radar */}
-        <span className="absolute inset-0 rounded-full bg-[#25D366] opacity-75 animate-ping -z-10" />
-        
-        {/* Ícone */}
-        <MessageCircle className="relative h-7 w-7 text-white fill-current" />
-      </span>
-    </a>
-  );
+interface Props {
+  message?: string;
+  children?: React.ReactNode;
+  variant?: Variant;
+  size?: Size;
+  className?: string;
+  showIcon?: boolean;
 }
 
-export default WhatsAppButton;
+const sizes: Record<Size, string> = {
+  sm: "h-10 px-4 text-sm",
+  md: "h-11 px-5 text-sm",
+  lg: "h-14 px-7 text-base",
+};
+
+const variants: Record<Variant, string> = {
+  brand:
+    "bg-brand text-brand-foreground hover:bg-brand/90 shadow-[var(--shadow-soft)]",
+  dark: "bg-primary text-primary-foreground hover:bg-primary/90",
+  outline:
+    "border border-border bg-transparent text-foreground hover:bg-muted",
+  ghost: "bg-transparent text-foreground hover:bg-muted",
+};
+
+export function WhatsAppButton({
+  message,
+  children = "Falar pelo WhatsApp",
+  variant = "brand",
+  size = "md",
+  className,
+  showIcon = true,
+}: Props) {
+  return (
+    <Button
+      asChild
+      className={cn(
+        "rounded-full font-medium transition-all",
+        sizes[size],
+        variants[variant],
+        className,
+      )}
+    >
+      <a
+        href={whatsappUrl(message)}
+        target="_blank"
+        rel="noopener noreferrer"
+        aria-label="Falar pelo WhatsApp"
+      >
+        {showIcon && <MessageCircle className="mr-2 h-4 w-4" strokeWidth={2} />}
+        {children}
+      </a>
+    </Button>
+  );
+}

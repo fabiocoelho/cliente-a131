@@ -1,4 +1,4 @@
-# Repo Sync Hub 
+# Repo Sync Hub
 
 Importar o repositório do GitHub para este projeto.
 
