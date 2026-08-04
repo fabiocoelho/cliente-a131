@@ -17,7 +17,7 @@ export function WhatsAppFloat() {
       </span>
 
       {/* Círculo do WhatsApp com Anel Pulsante */}
-      <span className="relative flex h-14 w-14 items-center justify-center rounded-full bg-[#25D366] text-white shadow-lg transition-transform duration-300 group-hover:scale-110">
+      <span className="relative flex h-14 w-14 items-center justify-center rounded-full bg-[#25D366] shadow-lg transition-transform duration-300 group-hover:scale-110">
         {/* Anel de Pulso / Radar */}
         <span className="absolute inset-0 rounded-full bg-[#25D366] opacity-75 animate-ping -z-10" />
         
