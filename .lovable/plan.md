@@ -1,22 +1,26 @@
-# Badge "Criado por GetSite"
-
-Criar um componente reutilizável e autocontido que exibe um selo fixo no rodapé da página, com link para a GetSite e botão de fechar.
+# GetSiteBadge — badge flutuante reutilizável
 
 ## O que será feito
 
-**Novo arquivo `src/components/GetSiteBadge/index.tsx`**
-- Cópia fiel do componente de referência: mesmo JSX, padding, gap, border radius, sombra, ring, divisor, botão de fechar com o mesmo SVG, estados `isVisible` / `isClosing`, fade-out de 200ms com remoção após 240ms.
-- Ajustes de marca:
-  - IDs: `getsite-badge`, `getsite-badge-cta`, `getsite-badge-text`, `getsite-badge-divider`, `getsite-badge-close`.
-  - `lang="pt-BR"`, `aria-label="Criado por GetSite"`, texto "Criado por", `title`/`aria-label` do fechar = "Fechar".
-  - Link para `https://getsite.com.br` (`target="_blank"`, `rel="noopener nofollow"`).
-  - No lugar do SVG da Lovable, `<img src="/logo-getsite.png" alt="GetSite" className="h-4 w-auto" />` — mesma altura visual (16px) e alinhamento do SVG original.
-- Posição: `fixed bottom-4 left-4 z-[9999]` (canto inferior esquerdo, conforme escolhido, para não colidir com o botão do WhatsApp). Todo o resto das classes Tailwind permanece igual à referência.
-- Sem dependência de nada do projeto (nenhum import de `@/lib`), para poder ser copiado para outros projetos.
+Criar a pasta autocontida `src/components/GetSiteBadge/` com o badge "Criado por GetSite", fiel ao componente de referência (mesmo layout, classes Tailwind, ring, divisor, botão de fechar com fade-out de 240ms, z-index e acessibilidade), mudando apenas a identidade da marca.
 
-**Integração**
-- Renderizar `<GetSiteBadge />` uma vez em `src/routes/__root.tsx`, dentro do `RootComponent` logo após o `<Outlet />`, de modo que apareça em todas as páginas.
+Diferenças em relação à referência:
+- IDs: `getsite-badge`, `getsite-badge-cta`, `getsite-badge-text`, `getsite-badge-divider`, `getsite-badge-close`
+- `lang="pt-BR"`, `aria-label="Editar com GetSite"`, botão fechar com `aria-label`/`title` = "Fechar"
+- Texto: "Criado por"
+- Link: `https://getsite.com.br` (target _blank, rel noopener nofollow)
+- Logo: `import logo from "./logo-getsite.png"` com `className="h-4 w-[52px] object-contain"`
+- Posição: `fixed bottom-4 left-4` (canto inferior esquerdo, conforme solicitado), evitando colisão com o botão flutuante do WhatsApp à direita
 
-## Observação sobre a logo
+## Integração
 
-O componente vai apontar para `/logo-getsite.png`. Esse arquivo ainda não existe em `public/` — enquanto você não enviar a imagem, o badge aparece com o espaço da logo vazio (texto e botão funcionam normalmente). Assim que enviar, é só colocar em `public/logo-getsite.png` e ela aparece automaticamente.
+O layout raiz deste projeto é `src/routes/__root.tsx` (TanStack Start). O badge será renderizado uma única vez dentro de `RootComponent`, ao lado do `<Outlet />`, aparecendo em todas as páginas.
+
+## Detalhes técnicos
+
+- Arquivo: `src/components/GetSiteBadge/index.tsx` — componente client-side com `useState` (`isVisible`, `isClosing`), sem dependências externas além do React, para que a pasta possa ser copiada isoladamente.
+- Imagem: `src/components/GetSiteBadge/logo-getsite.png`, importada via ES import (Vite resolve e faz o hashing do asset). Não usa `public/`.
+
+## Pendência
+
+O arquivo `logo-getsite.png` ainda não existe no projeto. Para não quebrar o build, a implementação incluirá um PNG temporário (placeholder simples com a marca) no caminho exato `src/components/GetSiteBadge/logo-getsite.png` — basta substituir esse arquivo pela logo oficial quando você enviá-la, sem alterar código.
