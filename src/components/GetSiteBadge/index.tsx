@@ -1,0 +1,59 @@
+import React, { useState } from 'react';
+
+import logo from "./logo-getsite.png";
+
+export const GetSiteBadge = () => {
+  const [isVisible, setIsVisible] = useState(true);
+  const [isClosing, setIsClosing] = useState(false);
+
+  if (!isVisible) return null;
+
+  const handleClose = (e: React.MouseEvent) => {
+    e.preventDefault();
+    e.stopPropagation();
+    setIsClosing(true);
+    setTimeout(() => {
+      setIsVisible(false);
+    }, 240);
+  };
+
+  return (
+    <aside
+      id="getsite-badge"
+      role="complementary"
+      dir="ltr"
+      lang="pt-BR"
+      aria-label="Criado por GetSite"
+      className={`fixed bottom-4 left-4 z-[9999] flex items-center gap-2 rounded-lg bg-[#1a1a1a] px-3 py-2 text-xs text-white shadow-lg ring-1 ring-white/10 transition-opacity duration-200 ${
+        isClosing ? 'opacity-0' : 'opacity-100'
+      }`}
+    >
+      <a
+        id="getsite-badge-cta"
+        target="_blank"
+        href="https://getsite.com.br"
+        rel="noopener nofollow"
+        aria-label="Criado por GetSite"
+        className="flex items-center gap-1.5 text-white no-underline hover:opacity-90"
+      >
+        <span id="getsite-badge-text" className="font-medium">Criado por</span>
+        <img src={logo} alt="GetSite" className="h-4 w-[52px] object-contain" />
+      </a>
+      <span id="getsite-badge-divider" aria-hidden="true" className="h-3.5 w-[1px] bg-white/20" />
+      <button
+        id="getsite-badge-close"
+        aria-label="Fechar"
+        title="Fechar"
+        type="button"
+        onClick={handleClose}
+        className="text-white/60 hover:text-white"
+      >
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="none" viewBox="0 0 16 16" aria-hidden="true">
+          <path fill="currentColor" d="M10.646 4.646a.5.5 0 1 1 .707.708L8.707 8l2.646 2.646a.5.5 0 1 1-.707.707L8 8.707l-2.646 2.646a.5.5 0 1 1-.708-.707L7.293 8 4.646 5.354a.5.5 0 1 1 .708-.708L8 7.293l2.646-2.647Z" />
+        </svg>
+      </button>
+    </aside>
+  );
+};
+
+export default GetSiteBadge;
