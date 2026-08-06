@@ -24,7 +24,7 @@ export const GetSiteBadge = () => {
       dir="ltr"
       lang="pt-BR"
       aria-label="Criado por GetSite"
-      className={`fixed bottom-3 left-3 z-[9999] flex items-stretch gap-1 rounded-[6px] bg-[#1a1a1a] px-2 py-[6px] text-xs text-white shadow-lg ring-1 ring-white/10 transition-opacity duration-200 ${
+      className={`fixed bottom-3 left-3 z-[9999] flex items-stretch gap-1 rounded-[6px] bg-[#1a1a1a] px-2 py-[5px] text-xs text-white shadow-lg ring-1 ring-white/10 transition-opacity duration-200 ${
         isClosing ? 'opacity-0' : 'opacity-100'
       }`}
     >
