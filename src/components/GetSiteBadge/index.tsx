@@ -24,7 +24,7 @@ export const GetSiteBadge = () => {
       dir="ltr"
       lang="pt-BR"
       aria-label="Criado por GetSite"
-      className={`fixed bottom-3 left-3 z-[9999] flex items-stretch gap-1 rounded-[6px] bg-[#1a1a1a] px-2 py-1.5 text-xs text-white shadow-lg ring-1 ring-white/10 transition-opacity duration-200 ${
+      className={`fixed bottom-3 left-3 z-[9999] flex items-stretch gap-2.5 rounded-[6px] bg-[#1a1a1a] px-2 py-1.5 text-xs text-white shadow-lg ring-1 ring-white/10 transition-opacity duration-200 ${
         isClosing ? 'opacity-0' : 'opacity-100'
       }`}
     >
@@ -34,7 +34,7 @@ export const GetSiteBadge = () => {
         href="https://getsite.com.br"
         rel="noopener nofollow"
         aria-label="Criado por GetSite"
-        className="flex items-center gap-1.5 text-white no-underline hover:opacity-90"
+        className="flex items-center gap-2.5 text-white no-underline hover:opacity-90"
       >
         <span id="getsite-badge-text" className="text-[12px] font-normal text-white/60 hover:text-white/90 transition-colors duration-200">Criado por</span>
         <img src={logo} alt="GetSite" className="h-3 w-[48px] object-contain scale-150" />
