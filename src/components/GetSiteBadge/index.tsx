@@ -24,7 +24,7 @@ export const GetSiteBadge = () => {
       dir="ltr"
       lang="pt-BR"
       aria-label="Criado por GetSite"
-      className={`fixed bottom-2 left-2 z-[9999] flex items-center gap-2 rounded-lg bg-[#1a1a1a] px-3 py-2 text-xs text-white shadow-lg ring-1 ring-white/10 transition-opacity duration-200 ${
+      className={`fixed bottom-3 left-3 z-[9999] flex items-center gap-2 rounded-lg bg-[#1a1a1a] px-3 py-2 text-xs text-white shadow-lg ring-1 ring-white/10 transition-opacity duration-200 ${
         isClosing ? 'opacity-0' : 'opacity-100'
       }`}
     >
@@ -39,7 +39,7 @@ export const GetSiteBadge = () => {
         <span id="getsite-badge-text" className="font-medium">Criado por</span>
         <img src={logo} alt="GetSite" className="h-4 w-[48px] object-contain" />
       </a>
-      <span id="getsite-badge-divider" aria-hidden="true" className="h-full w-[1px] bg-white/20" />
+      <span id="getsite-badge-divider" aria-hidden="true" className="self-stretch w-[1px] bg-white/20" />
       <button
         id="getsite-badge-close"
         aria-label="Fechar"
