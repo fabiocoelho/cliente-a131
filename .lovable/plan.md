@@ -23,4 +23,4 @@ O layout raiz deste projeto é `src/routes/__root.tsx` (TanStack Start). O badge
 
 ## Pendência
 
-O arquivo `logo-getsite.png` ainda não existe no projeto. Para não quebrar o build, a implementação incluirá um PNG temporário (placeholder simples com a marca) no caminho exato `src/components/GetSiteBadge/logo-getsite.png` — basta substituir esse arquivo pela logo oficial quando você enviá-la, sem alterar código.
+O arquivo `logo-getsite.png` ainda não existe no projeto. A estrutura será criada e o import feito normalmente; a implementação será interrompida enquanto o arquivo não existir, no caminho exato `src/components/GetSiteBadge/logo-getsite.png` — basta substituir esse arquivo pela logo oficial quando você enviá-la, sem alterar código.
