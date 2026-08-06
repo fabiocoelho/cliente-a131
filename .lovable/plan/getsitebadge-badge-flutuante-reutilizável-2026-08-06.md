@@ -5,6 +5,7 @@
 Criar a pasta autocontida `src/components/GetSiteBadge/` com o badge "Criado por GetSite", fiel ao componente de referência (mesmo layout, classes Tailwind, ring, divisor, botão de fechar com fade-out de 240ms, z-index e acessibilidade), mudando apenas a identidade da marca.
 
 Diferenças em relação à referência:
+
 - IDs: `getsite-badge`, `getsite-badge-cta`, `getsite-badge-text`, `getsite-badge-divider`, `getsite-badge-close`
 - `lang="pt-BR"`, `aria-label="Criado por GetSite"`, botão fechar com `aria-label`/`title` = "Fechar"
 - Texto: "Criado por"
@@ -24,3 +25,7 @@ O layout raiz deste projeto é `src/routes/__root.tsx` (TanStack Start). O badge
 ## Pendência
 
 O arquivo `logo-getsite.png` ainda não existe no projeto. A estrutura será criada e o import feito normalmente; a implementação será interrompida enquanto o arquivo não existir, no caminho exato `src/components/GetSiteBadge/logo-getsite.png` — basta substituir esse arquivo pela logo oficial quando você enviá-la, sem alterar código.
+
+## Exigência sobre as classes
+
+Sempre que possível, reutilize exatamente as mesmas classes Tailwind do componente de referência. Evite substituir classes por equivalentes ou reorganizar a estrutura do JSX.
