@@ -39,7 +39,7 @@ export const GetSiteBadge = () => {
         <span id="getsite-badge-text" className="font-normal text-white/50 hover:text-white/90 transition-colors duration-200">Criado por</span>
         <img src={logo} alt="GetSite" className="h-4 w-[48px] object-contain" />
       </a>
-      <span id="getsite-badge-divider" aria-hidden="true" className="self-stretch w-[1px] bg-white/10" />
+      <span id="getsite-badge-divider" aria-hidden="true" className="self-stretch w-[1px] bg-white/5" />
       <button
         id="getsite-badge-close"
         aria-label="Fechar"
