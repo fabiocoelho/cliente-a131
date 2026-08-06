@@ -17,9 +17,12 @@ export const GetSiteBadge = () => {
     }, 240);
   };
 
-const source = window.location.hostname;
-
-const badgeUrl = `https://getsite.com.br?utm_source=${encodeURIComponent(source)}&utm_medium=referral&utm_campaign=site_credit`;
+const badgeUrl =
+  typeof window !== "undefined"
+    ? `https://getsite.com.br?utm_source=${encodeURIComponent(
+        window.location.hostname
+      )}&utm_medium=referral&utm_campaign=site_credit`
+    : "https://getsite.com.br";
   
   return (
     <aside
@@ -35,7 +38,7 @@ const badgeUrl = `https://getsite.com.br?utm_source=${encodeURIComponent(source)
       <a
         id="getsite-badge-cta"
         target="_blank"
-        href="https://getsite.com.br"
+        href={badgeUrl}
         rel="noopener nofollow"
         aria-label="Criado por GetSite"
         className="flex items-center gap-1.5 text-white no-underline hover:opacity-90"
