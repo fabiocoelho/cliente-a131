@@ -17,6 +17,10 @@ export const GetSiteBadge = () => {
     }, 240);
   };
 
+const source = window.location.hostname;
+
+const badgeUrl = `https://getsite.com.br?utm_source=${encodeURIComponent(source)}&utm_medium=referral&utm_campaign=site_credit`;
+  
   return (
     <aside
       id="getsite-badge"
@@ -31,7 +35,7 @@ export const GetSiteBadge = () => {
       <a
         id="getsite-badge-cta"
         target="_blank"
-        href="https://getsite.com.br"
+        href={badgeUrl}
         rel="noopener nofollow"
         aria-label="Criado por GetSite"
         className="flex items-center gap-1.5 text-white no-underline hover:opacity-90"
