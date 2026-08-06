@@ -34,7 +34,7 @@ export const GetSiteBadge = () => {
         href="https://getsite.com.br"
         rel="noopener nofollow"
         aria-label="Criado por GetSite"
-        className="flex items-center gap-1.5 text-white no-underline hover:opacity-90"
+        className="flex items-center gap-1.5 rounded-[3px] px-1 transition-colors duration-200 hover:bg-white/10"
       >
         <span id="getsite-badge-text" className="text-[12px] font-normal text-white/60 hover:text-white/90 transition-colors duration-200">Criado por</span>
         <img src={logo} alt="GetSite" className="h-3 w-[48px] object-contain ml-[8px] mr-[8px] scale-140" />
