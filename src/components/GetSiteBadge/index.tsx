@@ -1,10 +1,19 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 
 import logo from "./logo-getsite.png";
 
 export const GetSiteBadge = () => {
   const [isVisible, setIsVisible] = useState(true);
   const [isClosing, setIsClosing] = useState(false);
+  const [badgeUrl, setBadgeUrl] = useState("https://getsite.com.br");
+
+  useEffect(() => {
+    setBadgeUrl(
+      `https://getsite.com.br?utm_source=${encodeURIComponent(
+        window.location.hostname,
+      )}&utm_medium=referral&utm_campaign=site_credit`,
+    );
+  }, []);
 
   if (!isVisible) return null;
 
@@ -17,13 +26,6 @@ export const GetSiteBadge = () => {
     }, 240);
   };
 
-const badgeUrl =
-  typeof window !== "undefined"
-    ? `https://getsite.com.br?utm_source=${encodeURIComponent(
-        window.location.hostname
-      )}&utm_medium=referral&utm_campaign=site_credit`
-    : "https://getsite.com.br";
-  
   return (
     <aside
       id="getsite-badge"
