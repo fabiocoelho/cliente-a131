@@ -6,7 +6,7 @@ Criar a pasta autocontida `src/components/GetSiteBadge/` com o badge "Criado por
 
 Diferenças em relação à referência:
 - IDs: `getsite-badge`, `getsite-badge-cta`, `getsite-badge-text`, `getsite-badge-divider`, `getsite-badge-close`
-- `lang="pt-BR"`, `aria-label="Editar com GetSite"`, botão fechar com `aria-label`/`title` = "Fechar"
+- `lang="pt-BR"`, `aria-label="Criado por GetSite"`, botão fechar com `aria-label`/`title` = "Fechar"
 - Texto: "Criado por"
 - Link: `https://getsite.com.br` (target _blank, rel noopener nofollow)
 - Logo: `import logo from "./logo-getsite.png"` com `className="h-4 w-[52px] object-contain"`
