@@ -35,7 +35,7 @@ const badgeUrl = `https://getsite.com.br?utm_source=${encodeURIComponent(source)
       <a
         id="getsite-badge-cta"
         target="_blank"
-        href={badgeUrl}
+        href="https://getsite.com.br"
         rel="noopener nofollow"
         aria-label="Criado por GetSite"
         className="flex items-center gap-1.5 text-white no-underline hover:opacity-90"
