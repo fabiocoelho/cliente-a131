@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-sca
+
 import logo from "./logo-getsite.png";
 
 export const GetSiteBadge = () => {
