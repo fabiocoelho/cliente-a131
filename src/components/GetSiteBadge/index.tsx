@@ -46,7 +46,7 @@ export const GetSiteBadge = () => {
         className="flex items-center gap-1.5 text-white no-underline hover:opacity-90"
       >
         <span id="getsite-badge-text" className="text-[12px] font-normal text-white/60 hover:text-white/90 transition-colors duration-200">Criado por</span>
-        <img src={logo} alt="GetSite" className="h-3 w-[48px] object-contain ml-[8px] mr-[14px] scale-125" />
+        <img src={logo} alt="GetSite" className="h-3 w-[48px] object-contain ml-[8px] mr-[12px] scale-125" />
       </a>
       <span id="getsite-badge-divider" aria-hidden="true" className="w-[1px] bg-white/5" />
       <button
