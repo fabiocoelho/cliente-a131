@@ -33,7 +33,7 @@ export const GetSiteBadge = () => {
       dir="ltr"
       lang="pt-BR"
       aria-label="Criado por GetSite"
-      className={`fixed bottom-3 left-3 z-[9999] flex items-stretch gap-1 rounded-[7px] bg-[#121212] hover:bg-[#242424] transition-colors duration-200 px-2 py-[5px] text-xs text-white shadow-lg ring-1 ring-white/10 transition-opacity duration-200 ${
+      className={`fixed bottom-3 left-3 z-[9999] flex items-stretch gap-1 rounded-[7px] bg-[#242424] hover:bg-[#242424] transition-colors duration-200 px-2 py-[5px] text-xs text-white shadow-lg ring-1 ring-white/10 transition-opacity duration-200 ${
         isClosing ? 'opacity-0' : 'opacity-100'
       }`}
     >
