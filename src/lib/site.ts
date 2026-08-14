@@ -45,7 +45,7 @@ export const SITE_CONFIG = {
   colors: {
     primary: "#000000",
     primaryHover: "#1a1a1a",
-    accent: "#25D366",
+    accent: "#33A13C",
   },
 
   /* ------------------------------------------------------------------ */
