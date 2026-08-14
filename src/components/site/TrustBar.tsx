@@ -9,7 +9,7 @@ const stats = [
 
 export function TrustBar() {
   return (
-    <section aria-label="Provas de confiança" className="border-y border-border bg-secondary/40">
+    <section aria-label="Provas de confiança" className="border-y border-border bg-section-alt">
       <div className="mx-auto grid max-w-7xl grid-cols-2 gap-4 px-5 py-10 sm:px-8 md:grid-cols-4">
         {stats.map((s) => (
           <div

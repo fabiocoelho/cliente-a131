@@ -29,7 +29,7 @@ const reviews = [
 
 export function Reviews() {
   return (
-    <section id="avaliacoes" className="border-y border-border bg-secondary/30 py-24 sm:py-32">
+    <section id="avaliacoes" className="border-y border-border bg-section-alt py-24 sm:py-32">
       <div className="mx-auto max-w-7xl px-5 sm:px-8">
         <div className="max-w-2xl">
           <span className="text-xs font-medium uppercase tracking-widest text-brand">
