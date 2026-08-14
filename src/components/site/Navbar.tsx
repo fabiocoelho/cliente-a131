@@ -1,11 +1,12 @@
-import { useEffect, useState } from "react";
+import { lazy, Suspense, useEffect, useState } from "react";
 import { Menu } from "lucide-react";
-import { Sheet, SheetContent, SheetTrigger, SheetTitle } from "@/components/ui/sheet";
 import { WhatsAppButton } from "./WhatsAppButton";
 import { cn } from "@/lib/utils";
 import { SITE } from "@/lib/site";
 import logoRsMultas from "@/assets/logo-rs-multas.png";
 import logoRsMultasWebp from "@/assets/logo-rs-multas.webp";
+
+const MobileMenu = lazy(() => import("./MobileMenu"));
 
 const links = [
   { href: "#servicos", label: "Serviços" },
@@ -19,6 +20,7 @@ const links = [
 export function Navbar() {
   const [scrolled, setScrolled] = useState(false);
   const [open, setOpen] = useState(false);
+  const [menuLoaded, setMenuLoaded] = useState(false);
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 12);
@@ -79,34 +81,25 @@ export function Navbar() {
           </div>
 
           <div className="lg:hidden">
-            <Sheet open={open} onOpenChange={setOpen}>
-              <SheetTrigger
-                className="grid h-10 w-10 place-items-center rounded-full border border-border text-foreground"
-                aria-label="Abrir menu"
-              >
-                <Menu className="h-5 w-5" />
-              </SheetTrigger>
-              <SheetContent side="right" className="w-[85vw] max-w-sm">
-                <SheetTitle className="font-display text-2xl">Menu</SheetTitle>
-                <nav className="mt-6 flex flex-col gap-1">
-                  {links.map((l) => (
-                    <a
-                      key={l.href}
-                      href={l.href}
-                      onClick={() => setOpen(false)}
-                      className="rounded-lg px-3 py-3 text-base font-medium text-foreground hover:bg-muted"
-                    >
-                      {l.label}
-                    </a>
-                  ))}
-                </nav>
-                <div className="mt-6">
-                  <WhatsAppButton size="lg" className="w-full">
-                    Falar pelo WhatsApp
-                  </WhatsAppButton>
-                </div>
-              </SheetContent>
-            </Sheet>
+            <button
+              type="button"
+              className="grid h-10 w-10 place-items-center rounded-full border border-border text-foreground"
+              aria-label="Abrir menu"
+              aria-expanded={open}
+              onPointerEnter={() => setMenuLoaded(true)}
+              onFocus={() => setMenuLoaded(true)}
+              onClick={() => {
+                setMenuLoaded(true);
+                setOpen(true);
+              }}
+            >
+              <Menu className="h-5 w-5" />
+            </button>
+            {menuLoaded && (
+              <Suspense fallback={null}>
+                <MobileMenu open={open} onOpenChange={setOpen} links={links} />
+              </Suspense>
+            )}
           </div>
         </div>
       </div>
