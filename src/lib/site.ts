@@ -11,17 +11,19 @@ export const SITE_CONFIG = {
   /* a) DADOS DO CLIENTE                                                 */
   /* ------------------------------------------------------------------ */
   client: {
-    name: "GetSite",
-    city: "Porto Alegre",
+    name: "RS Multas",
+    city: "Gravataí",
     state: "RS",
-    cityState: "Porto Alegre/RS",
-    phoneDisplay: "(51) 98057-3087",
-    phoneRaw: "5551980573087",
-    telHref: "tel:+5551980573087",
-    email: "contato@getsite.com.br",
-    address: "Rua Barão do Amazonas, 353 — Petrópolis, Porto Alegre/RS",
-    hours: "Segunda a Sexta, 9h às 18h",
-    mapsQuery: "Rua Barão do Amazonas, 353 - Petrópolis, Porto Alegre - RS",
+    cityState: "Gravataí/RS",
+    phoneDisplay: "(51) 98313-1501",
+    phoneRaw: "5551983131501",
+    telHref: "tel:+5551983131501",
+    email: "contato@rsmultas.com",
+    address:
+      "Av. Dorival Cândido Luz de Oliveira, 1848 — Jansen, Gravataí/RS, 94030-000",
+    hours: "Segunda a Sexta, 8h às 16h",
+    mapsQuery:
+      "Av. Dorival Cândido Luz de Oliveira, 1848 - Jansen, Gravataí - RS, 94030-000",
 
     /** Chave de integração do formulário (Web3Forms). */
     web3formsKey: "SUA-CHAVE-WEB3FORMS-AQUI",
@@ -31,10 +33,10 @@ export const SITE_CONFIG = {
   /* b) MENSAGENS DE WHATSAPP                                            */
   /* ------------------------------------------------------------------ */
   whatsapp: {
-    number: "5551980573087",
-    whatsappMessage: "Oi Fábio! Vi o site e gostaria de tirar uma dúvida.",
+    number: "5551983131501",
+    whatsappMessage: "Olá! Vi o site da RS Multas e gostaria de tirar uma dúvida.",
     whatsappServiceMessage: (servico: string) =>
-      `Oi Fábio! Vi o site e gostaria de tirar uma dúvida sobre o serviço: ${servico}.`,
+      `Olá! Vi o site da RS Multas e gostaria de tirar uma dúvida sobre o serviço: ${servico}.`,
   },
 
   /* ------------------------------------------------------------------ */
