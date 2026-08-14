@@ -15,9 +15,9 @@ export const SITE_CONFIG = {
     city: "Gravataí",
     state: "RS",
     cityState: "Gravataí/RS",
-    phoneDisplay: "(51) 98313-1501",
-    phoneRaw: "5551983131501",
-    telHref: "tel:+5551983131501",
+    phoneDisplay: "(51) 98057-3087",
+    phoneRaw: "5551980573087",
+    telHref: "tel:+5551980573087",
     email: "contato@rsmultas.com",
     address:
       "Av. Dorival Cândido Luz de Oliveira, 1848 — Jansen, Gravataí/RS, 94030-000",
