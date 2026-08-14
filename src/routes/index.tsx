@@ -63,9 +63,9 @@ export const Route = createFileRoute("/")({
         as: "image",
         type: "image/avif",
         href: heroAvif960,
-        imagesrcset: `${heroAvif400} 400w, ${heroAvif640} 640w, ${heroAvif960} 960w`,
-        imagesizes: "(min-width: 1024px) 45vw, 100vw",
-        fetchpriority: "high",
+        imageSrcSet: `${heroAvif400} 400w, ${heroAvif640} 640w, ${heroAvif960} 960w`,
+        imageSizes: "(min-width: 1024px) 45vw, 100vw",
+        fetchPriority: "high",
       },
     ],
     scripts: [
