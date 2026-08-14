@@ -1,5 +1,11 @@
 import { Star, MapPin, Clock, ArrowRight, Zap, ShieldCheck } from "lucide-react";
 import heroImage from "@/assets/Vistoria.jpeg";
+import heroAvif640 from "@/assets/hero-640.avif";
+import heroAvif960 from "@/assets/hero-960.avif";
+import heroAvif1200 from "@/assets/hero-1200.avif";
+import heroWebp640 from "@/assets/hero-640.webp";
+import heroWebp960 from "@/assets/hero-960.webp";
+import heroWebp1200 from "@/assets/hero-1200.webp";
 import { WhatsAppButton } from "./WhatsAppButton";
 import { SITE } from "@/lib/site";
 import { useParallax } from "@/hooks/use-parallax";
@@ -90,14 +96,28 @@ export function Hero() {
                 backfaceVisibility: "hidden",
               }}
             >
-              <img
-                src={heroImage}
-                alt={`${SITE.name} — despachante em ${SITE.cityState}`}
-                width={1200}
-                height={1400}
-                className="h-full w-full object-cover"
-                fetchPriority="high"
-              />
+              <picture>
+                <source
+                  type="image/avif"
+                  sizes="(min-width: 1024px) 45vw, 100vw"
+                  srcSet={`${heroAvif640} 640w, ${heroAvif960} 960w, ${heroAvif1200} 1200w`}
+                />
+                <source
+                  type="image/webp"
+                  sizes="(min-width: 1024px) 45vw, 100vw"
+                  srcSet={`${heroWebp640} 640w, ${heroWebp960} 960w, ${heroWebp1200} 1200w`}
+                />
+                <img
+                  src={heroImage}
+                  alt={`${SITE.name} — despachante em ${SITE.cityState}`}
+                  width={1200}
+                  height={896}
+                  className="h-full w-full object-cover"
+                  fetchPriority="high"
+                  loading="eager"
+                  decoding="async"
+                />
+              </picture>
             </div>
           </div>
 
