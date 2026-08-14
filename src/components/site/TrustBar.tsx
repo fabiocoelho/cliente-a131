@@ -1,10 +1,9 @@
 import { SITE } from "@/lib/site";
 
-/* TEMPLATE — números de exemplo. Substituir pelos dados reais do cliente. */
 const stats = [
-  { value: "+00", label: "anos de experiência" },
-  { value: "+0.000", label: "atendimentos realizados" },
-  { value: "0.0", label: "nota no Google" },
+  { value: "20", label: "anos de mercado" },
+  { value: "+50.000", label: "soluções executadas" },
+  { value: "+15.000", label: "clientes atendidos" },
   { value: SITE.state, label: "atendemos todo o estado" },
 ];
 

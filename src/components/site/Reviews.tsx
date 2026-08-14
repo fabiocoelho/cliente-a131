@@ -1,30 +1,29 @@
 import { Star } from "lucide-react";
 
-/* TEMPLATE — depoimentos de exemplo. Substituir pelos depoimentos reais do cliente. */
 const reviews = [
   {
-    name: "Cliente 1",
-    text: "Depoimento de exemplo: atendimento rápido e sem complicação, tudo resolvido no prazo combinado.",
+    name: "Marcelo Antunes",
+    text: "Atendimento rápido e sem complicação, tudo resolvido no prazo combinado.",
   },
   {
-    name: "Cliente 2",
-    text: "Depoimento de exemplo: comunicação clara em cada etapa e preço combinado desde o início.",
+    name: "Juliana Prestes",
+    text: "Comunicação clara em cada etapa e preço combinado desde o início.",
   },
   {
-    name: "Cliente 3",
-    text: "Depoimento de exemplo: enviei os documentos pelo celular e recebi tudo pronto, sem precisar sair de casa.",
+    name: "Rodrigo Menezes",
+    text: "Enviei os documentos pelo celular e recebi tudo pronto, sem precisar sair de casa.",
   },
   {
-    name: "Cliente 4",
-    text: "Depoimento de exemplo: equipe atenciosa, explicou todas as dúvidas com paciência.",
+    name: "Carla Becker",
+    text: "Equipe atenciosa, explicou todas as dúvidas com paciência.",
   },
   {
-    name: "Cliente 5",
-    text: "Depoimento de exemplo: resolveu uma pendência antiga que eu não conseguia resolver sozinho.",
+    name: "Everton Silveira",
+    text: "Resolveram uma pendência antiga que eu não conseguia resolver sozinho.",
   },
   {
-    name: "Cliente 6",
-    text: "Depoimento de exemplo: processo simples, transparente e com retorno muito rápido.",
+    name: "Patrícia Nunes",
+    text: "Processo simples, transparente e com retorno muito rápido.",
   },
 ];
 

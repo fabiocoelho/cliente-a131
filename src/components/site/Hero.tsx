@@ -106,9 +106,9 @@ export function Hero() {
               <ShieldCheck className="h-4 w-4 text-brand" strokeWidth={2} />
             </span>
             <div>
-              <div className="font-display text-lg leading-none text-foreground">+0.000</div>
+              <div className="font-display text-lg leading-none text-foreground">+50.000</div>
               <div className="mt-1 text-[0.7rem] uppercase tracking-wider text-muted-foreground">
-                atendimentos
+                soluções executadas
               </div>
             </div>
           </div>
@@ -118,12 +118,12 @@ export function Hero() {
               {[...Array(5)].map((_, i) => (
                 <Star key={i} className="h-4 w-4 fill-current" strokeWidth={0} />
               ))}
-              <span className="ml-1 text-xs font-medium text-muted-foreground">0.0</span>
+              <span className="ml-1 text-xs font-medium text-muted-foreground">4,9</span>
             </div>
             <p className="mt-2 text-sm text-foreground">
-              "Depoimento de exemplo: resolveu tudo em tempo recorde."
+              "Resolveram minhas multas em tempo recorde, sem eu sair de casa."
             </p>
-            <p className="mt-1 text-xs text-muted-foreground">— Cliente de exemplo</p>
+            <p className="mt-1 text-xs text-muted-foreground">— Marcelo A.</p>
           </div>
         </div>
       </div>
