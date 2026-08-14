@@ -1,4 +1,10 @@
 import aboutImage from "@/assets/about-office.jpg";
+import aboutAvif640 from "@/assets/about-640.avif";
+import aboutAvif960 from "@/assets/about-960.avif";
+import aboutAvif1200 from "@/assets/about-1200.avif";
+import aboutWebp640 from "@/assets/about-640.webp";
+import aboutWebp960 from "@/assets/about-960.webp";
+import aboutWebp1200 from "@/assets/about-1200.webp";
 import { WhatsAppButton } from "./WhatsAppButton";
 import { SITE } from "@/lib/site";
 
@@ -8,14 +14,27 @@ export function About() {
       <div className="mx-auto grid max-w-7xl gap-12 px-5 sm:px-8 lg:grid-cols-2 lg:items-center lg:gap-20">
         <div className="relative order-2 lg:order-1">
           <div className="overflow-hidden rounded-[1.75rem] border border-border shadow-[var(--shadow-elegant)]">
-            <img
-              src={aboutImage}
-              alt={`Escritório do ${SITE.name} em ${SITE.cityState}`}
-              width={1400}
-              height={1000}
-              loading="lazy"
-              className="h-full w-full object-cover"
-            />
+            <picture>
+              <source
+                type="image/avif"
+                sizes="(min-width: 1024px) 50vw, 100vw"
+                srcSet={`${aboutAvif640} 640w, ${aboutAvif960} 960w, ${aboutAvif1200} 1200w`}
+              />
+              <source
+                type="image/webp"
+                sizes="(min-width: 1024px) 50vw, 100vw"
+                srcSet={`${aboutWebp640} 640w, ${aboutWebp960} 960w, ${aboutWebp1200} 1200w`}
+              />
+              <img
+                src={aboutImage}
+                alt={`Escritório do ${SITE.name} em ${SITE.cityState}`}
+                width={1200}
+                height={896}
+                loading="lazy"
+                decoding="async"
+                className="h-full w-full object-cover"
+              />
+            </picture>
           </div>
         </div>
 
