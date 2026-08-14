@@ -33,7 +33,7 @@ export const SITE_CONFIG = {
   /* b) MENSAGENS DE WHATSAPP                                            */
   /* ------------------------------------------------------------------ */
   whatsapp: {
-    number: "5551983131501",
+    number: "5551980573087",
     whatsappMessage: "Olá! Vi o site da RS Multas e gostaria de tirar uma dúvida.",
     whatsappServiceMessage: (servico: string) =>
       `Olá! Vi o site da RS Multas e gostaria de tirar uma dúvida sobre o serviço: ${servico}.`,
