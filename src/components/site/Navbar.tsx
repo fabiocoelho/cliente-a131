@@ -3,7 +3,7 @@ import { Menu } from "lucide-react";
 import { Sheet, SheetContent, SheetTrigger, SheetTitle } from "@/components/ui/sheet";
 import { WhatsAppButton } from "./WhatsAppButton";
 import { cn } from "@/lib/utils";
-import { SITE, SITE_INITIAL } from "@/lib/site";
+import { SITE } from "@/lib/site";
 import logoAsset from "@/assets/logo-rs-multas.png.asset.json";
 
 const links = [
