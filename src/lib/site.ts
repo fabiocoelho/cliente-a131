@@ -43,9 +43,9 @@ export const SITE_CONFIG = {
   /* c) PALETA DE CORES DA MARCA                                         */
   /* ------------------------------------------------------------------ */
   colors: {
-    primary: "#33A13C",
-    primaryHover: "#1a1a1a",
-    accent: "#33A13C",
+    primary: "#33A13C"
+    primaryHover: "#1a1a1a"
+    accent: "#33A13C"
   },
 
   /* ------------------------------------------------------------------ */
