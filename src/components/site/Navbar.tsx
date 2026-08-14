@@ -5,6 +5,7 @@ import { WhatsAppButton } from "./WhatsAppButton";
 import { cn } from "@/lib/utils";
 import { SITE } from "@/lib/site";
 import logoRsMultas from "@/assets/logo-rs-multas.png";
+import logoRsMultasWebp from "@/assets/logo-rs-multas.webp";
 
 const links = [
   { href: "#servicos", label: "Serviços" },
@@ -41,14 +42,18 @@ export function Navbar() {
           className="flex min-w-0 items-center gap-2"
           aria-label={SITE.name}
         >
-          <img
-            src={logoRsMultas}
-            alt={`Logo ${SITE.name}`}
-            className="h-9 w-9 shrink-0 object-contain"
-            width={36}
-            height={36}
-            decoding="async"
-          />
+          <picture>
+            <source type="image/webp" srcSet={logoRsMultasWebp} />
+            <img
+              src={logoRsMultas}
+              alt={`Logo ${SITE.name}`}
+              className="h-9 w-9 shrink-0 object-contain"
+              width={36}
+              height={36}
+              decoding="async"
+              fetchPriority="high"
+            />
+          </picture>
           <span className="truncate font-display text-lg tracking-tight text-foreground">
             {SITE.name}
           </span>
