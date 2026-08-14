@@ -70,10 +70,10 @@
   --popover: oklch(0.99 0.003 70);
   --popover-foreground: oklch(0.235 0.045 265);
 
-  /* Brand = coral */
-  --brand: oklch(0.7 0.175 27);
-  --brand-foreground: oklch(0.235 0.045 265);
-  --brand-soft: oklch(0.945 0.035 30);
+  /* Brand = verde #33A13C (SITE_CONFIG.colors.primary) */
+  --brand: oklch(0.622 0.155 145);
+  --brand-foreground: oklch(0.99 0.003 70);
+  --brand-soft: oklch(0.945 0.04 145);
 
   /* Primary = marinho profundo */
   --primary: oklch(0.235 0.045 265);
@@ -93,9 +93,9 @@
 
   --border: oklch(0.9 0.012 265);
   --input: oklch(0.9 0.012 265);
-  --ring: oklch(0.7 0.175 27);
+  --ring: oklch(0.622 0.155 145);
 
-  --chart-1: oklch(0.7 0.175 27);
+  --chart-1: oklch(0.622 0.155 145);
   --chart-2: oklch(0.42 0.09 265);
   --chart-3: oklch(0.235 0.045 265);
   --chart-4: oklch(0.8 0.11 40);
@@ -108,7 +108,7 @@
   --sidebar-accent: oklch(0.945 0.014 265);
   --sidebar-accent-foreground: oklch(0.235 0.045 265);
   --sidebar-border: oklch(0.9 0.012 265);
-  --sidebar-ring: oklch(0.7 0.175 27);
+  --sidebar-ring: oklch(0.622 0.155 145);
 }
 
 html {
