@@ -37,16 +37,15 @@ export const SITE_CONFIG = {
     whatsappMessage: "Olá! Vi o site da RS Multas e gostaria de tirar uma dúvida.",
     whatsappServiceMessage: (servico: string) =>
       `Olá! Vi o site da RS Multas e gostaria de tirar uma dúvida sobre o serviço: ${servico}.`,
-  },
-
-  /* ------------------------------------------------------------------ */
-  /* c) PALETA DE CORES DA MARCA                                         */
-  /* ------------------------------------------------------------------ */
-  colors: {
-    primary: "#33A13C"
-    primaryHover: "#1a1a1a"
-    accent: "#33A13C"
-  },
+    
+ /* ------------------------------------------------------------------ */
+    /* c) PALETA DE CORES DA MARCA                                        */
+    /* ------------------------------------------------------------------ */
+    colors: {
+      primary: "#33A13C",
+      primaryHover: "#28802f",
+      accent: "#33A13C",
+    },
 
   /* ------------------------------------------------------------------ */
   /* d) TIPOGRAFIA E FONTES                                              */
