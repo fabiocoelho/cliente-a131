@@ -76,6 +76,9 @@
   --brand-foreground: oklch(0.99 0.003 70);
   --brand-soft: oklch(0.945 0.04 145);
 
+  /* Fundo alternado das seções (#CCDDD8) */
+  --section-alt: oklch(0.8833 0.0194 176.4);
+
   /* Primary = marinho profundo */
   --primary: oklch(0.235 0.045 265);
   --primary-foreground: oklch(0.972 0.005 70);
