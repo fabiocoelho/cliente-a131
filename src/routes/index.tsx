@@ -13,6 +13,8 @@ import { FinalCta } from "@/components/site/FinalCta";
 import { Footer } from "@/components/site/Footer";
 import { WhatsAppFab } from "@/components/site/WhatsAppFab";
 import { SITE } from "@/lib/site";
+import heroAvif960 from "@/assets/hero-960.avif";
+import heroAvif640 from "@/assets/hero-640.avif";
 
 const TITLE = `${SITE.name} — Despachante em ${SITE.cityState}`;
 const DESCRIPTION = `${SITE.name}, despachante em ${SITE.cityState}: transferência de veículo, CNH, licenciamento e mais. Atendimento rápido pelo WhatsApp ${SITE.phoneDisplay}.`;
@@ -53,7 +55,18 @@ export const Route = createFileRoute("/")({
       { name: "twitter:title", content: TITLE },
       { name: "twitter:description", content: DESCRIPTION },
     ],
-    links: [{ rel: "canonical", href: "/" }],
+    links: [
+      { rel: "canonical", href: "/" },
+      {
+        rel: "preload",
+        as: "image",
+        type: "image/avif",
+        href: heroAvif960,
+        imagesrcset: `${heroAvif640} 640w, ${heroAvif960} 960w`,
+        imagesizes: "(min-width: 1024px) 45vw, 100vw",
+        fetchpriority: "high",
+      },
+    ],
     scripts: [
       {
         type: "application/ld+json",
