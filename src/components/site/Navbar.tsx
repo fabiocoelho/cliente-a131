@@ -4,7 +4,7 @@ import { Sheet, SheetContent, SheetTrigger, SheetTitle } from "@/components/ui/s
 import { WhatsAppButton } from "./WhatsAppButton";
 import { cn } from "@/lib/utils";
 import { SITE } from "@/lib/site";
-import logoAsset from "@/assets/logo-rs-multas.png.asset.json";
+import logoRsMultas from "@/assets/logo-rs-multas.png";
 
 const links = [
   { href: "#servicos", label: "Serviços" },
@@ -42,7 +42,7 @@ export function Navbar() {
           aria-label={SITE.name}
         >
           <img
-            src={logoAsset.url}
+            src={logoRsMultas}
             alt={`Logo ${SITE.name}`}
             className="h-9 w-9 shrink-0 object-contain"
             width={36}
