@@ -92,11 +92,19 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       { property: "og:type", content: "website" },
     ],
     links: [
-      { rel: "preconnect", href: "https://fonts.googleapis.com" },
-      { rel: "preconnect", href: "https://fonts.gstatic.com", crossOrigin: "anonymous" },
       {
-        rel: "stylesheet",
-        href: "https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=DM+Sans:wght@400;500;600;700&display=swap",
+        rel: "preload",
+        as: "font",
+        type: "font/woff2",
+        href: "/fonts/space-grotesk-latin.woff2",
+        crossOrigin: "anonymous",
+      },
+      {
+        rel: "preload",
+        as: "font",
+        type: "font/woff2",
+        href: "/fonts/dm-sans-latin.woff2",
+        crossOrigin: "anonymous",
       },
       { rel: "stylesheet", href: appCss },
       { rel: "icon", type: "image/png", href: "/favicon.png" },

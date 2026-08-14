@@ -14,14 +14,15 @@ export function WhatsAppFab() {
   }, []);
 
   return (
-    <div
+    <aside
+      aria-label="Atalho de contato pelo WhatsApp"
       className={cn(
         "group fixed bottom-5 right-5 z-40 flex items-center gap-3 transition-all duration-300",
         visible ? "opacity-100" : "pointer-events-none translate-y-2 opacity-0",
       )}
     >
       <span
-        role="tooltip"
+        aria-hidden="true"
         className="pointer-events-none hidden translate-x-2 rounded-full border border-[#9E9E9E] bg-card px-3 py-1.5 text-sm font-medium text-foreground shadow-[var(--shadow-elegant)] opacity-0 transition-all duration-300 group-hover:translate-x-0 group-hover:opacity-100 sm:block"
       >
         Fale comigo!
@@ -35,6 +36,6 @@ export function WhatsAppFab() {
       >
         <MessageCircle className="h-6 w-6" strokeWidth={2} />
       </a>
-    </div>
+    </aside>
   );
 }

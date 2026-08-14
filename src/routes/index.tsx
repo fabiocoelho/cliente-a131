@@ -15,6 +15,7 @@ import { WhatsAppFab } from "@/components/site/WhatsAppFab";
 import { SITE } from "@/lib/site";
 import heroAvif960 from "@/assets/hero-960.avif";
 import heroAvif640 from "@/assets/hero-640.avif";
+import heroAvif400 from "@/assets/hero-400.avif";
 
 const TITLE = `${SITE.name} — Despachante em ${SITE.cityState}`;
 const DESCRIPTION = `${SITE.name}, despachante em ${SITE.cityState}: transferência de veículo, CNH, licenciamento e mais. Atendimento rápido pelo WhatsApp ${SITE.phoneDisplay}.`;
@@ -62,9 +63,9 @@ export const Route = createFileRoute("/")({
         as: "image",
         type: "image/avif",
         href: heroAvif960,
-        imagesrcset: `${heroAvif640} 640w, ${heroAvif960} 960w`,
-        imagesizes: "(min-width: 1024px) 45vw, 100vw",
-        fetchpriority: "high",
+        imageSrcSet: `${heroAvif400} 400w, ${heroAvif640} 640w, ${heroAvif960} 960w`,
+        imageSizes: "(min-width: 1024px) 45vw, 100vw",
+        fetchPriority: "high",
       },
     ],
     scripts: [

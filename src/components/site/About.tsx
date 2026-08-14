@@ -39,7 +39,7 @@ export function About() {
         </div>
 
         <div className="order-1 lg:order-2">
-          <span className="text-xs font-medium uppercase tracking-widest text-brand">
+          <span className="text-xs font-medium uppercase tracking-widest text-brand-strong">
             Sobre
           </span>
           <h2 className="mt-3 font-display text-3xl tracking-tight text-foreground sm:text-5xl">

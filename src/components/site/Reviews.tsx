@@ -32,7 +32,7 @@ export function Reviews() {
     <section id="avaliacoes" className="border-y border-border bg-section-alt py-24 sm:py-32">
       <div className="mx-auto max-w-7xl px-5 sm:px-8">
         <div className="max-w-2xl">
-          <span className="text-xs font-medium uppercase tracking-widest text-brand">
+          <span className="text-xs font-medium uppercase tracking-widest text-brand-strong">
             Avaliações
           </span>
           <h2 className="mt-3 font-display text-3xl tracking-tight text-foreground sm:text-5xl">
