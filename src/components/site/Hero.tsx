@@ -1,8 +1,10 @@
 import { Star, MapPin, Clock, ArrowRight, Zap, ShieldCheck } from "lucide-react";
 import heroImage from "@/assets/Vistoria.jpeg";
+import heroAvif400 from "@/assets/hero-400.avif";
 import heroAvif640 from "@/assets/hero-640.avif";
 import heroAvif960 from "@/assets/hero-960.avif";
 import heroAvif1200 from "@/assets/hero-1200.avif";
+import heroWebp400 from "@/assets/hero-400.webp";
 import heroWebp640 from "@/assets/hero-640.webp";
 import heroWebp960 from "@/assets/hero-960.webp";
 import heroWebp1200 from "@/assets/hero-1200.webp";
@@ -100,12 +102,12 @@ export function Hero() {
                 <source
                   type="image/avif"
                   sizes="(min-width: 1024px) 45vw, 100vw"
-                  srcSet={`${heroAvif640} 640w, ${heroAvif960} 960w, ${heroAvif1200} 1200w`}
+                  srcSet={`${heroAvif400} 400w, ${heroAvif640} 640w, ${heroAvif960} 960w, ${heroAvif1200} 1200w`}
                 />
                 <source
                   type="image/webp"
                   sizes="(min-width: 1024px) 45vw, 100vw"
-                  srcSet={`${heroWebp640} 640w, ${heroWebp960} 960w, ${heroWebp1200} 1200w`}
+                  srcSet={`${heroWebp400} 400w, ${heroWebp640} 640w, ${heroWebp960} 960w, ${heroWebp1200} 1200w`}
                 />
                 <img
                   src={heroImage}
