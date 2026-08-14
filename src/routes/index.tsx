@@ -55,8 +55,18 @@ export const Route = createFileRoute("/")({
       { name: "twitter:title", content: TITLE },
       { name: "twitter:description", content: DESCRIPTION },
     ],
-    links: [{ rel: "canonical", href: "/" }],
-      // eslint-disable-next-line
+    links: [
+      { rel: "canonical", href: "/" },
+      {
+        rel: "preload",
+        as: "image",
+        type: "image/avif",
+        href: heroAvif960,
+        imagesrcset: `${heroAvif640} 640w, ${heroAvif960} 960w`,
+        imagesizes: "(min-width: 1024px) 45vw, 100vw",
+        fetchpriority: "high",
+      },
+    ],
     scripts: [
       {
         type: "application/ld+json",
