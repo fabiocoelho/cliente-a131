@@ -39,8 +39,11 @@ export const SITE_CONFIG = {
       `Olá! Vi o site da RS Multas e gostaria de tirar uma dúvida sobre o serviço: ${servico}.`,
     },
   
- /* ------------------------------------------------------------------ */
+  /* ------------------------------------------------------------------ */
     /* c) PALETA DE CORES DA MARCA                                        */
+    /* ATENÇÃO: estes valores são apenas referência/documentação.         */
+    /* As cores realmente aplicadas na interface ficam nos tokens         */
+    /* --brand / --brand-soft / --ring em src/styles.css.                 */
     /* ------------------------------------------------------------------ */
     colors: {
       primary: "#33A13C",
