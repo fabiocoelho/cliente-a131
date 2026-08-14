@@ -23,7 +23,7 @@ const sizes: Record<Size, string> = {
 
 const variants: Record<Variant, string> = {
   brand:
-    "bg-brand text-brand-foreground hover:bg-brand/90 shadow-[var(--shadow-soft)]",
+    "bg-brand-strong text-brand-foreground hover:bg-brand-strong/90 shadow-[var(--shadow-soft)]",
   dark: "bg-primary text-primary-foreground hover:bg-primary/90",
   outline:
     "border border-border bg-transparent text-foreground hover:bg-muted",
