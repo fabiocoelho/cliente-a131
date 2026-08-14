@@ -22,7 +22,7 @@ export function WhatsAppFab() {
     >
       <span
         role="tooltip"
-        className="pointer-events-none hidden translate-x-2 rounded-full bg-card px-3 py-1.5 text-sm font-medium text-foreground shadow-[var(--shadow-elegant)] opacity-0 transition-all duration-300 group-hover:translate-x-0 group-hover:opacity-100 sm:block"
+        className="pointer-events-none hidden translate-x-2 rounded-full border border-[#9E9E9E] bg-card px-3 py-1.5 text-sm font-medium text-foreground shadow-[var(--shadow-elegant)] opacity-0 transition-all duration-300 group-hover:translate-x-0 group-hover:opacity-100 sm:block"
       >
         Fale comigo!
       </span>
@@ -31,7 +31,6 @@ export function WhatsAppFab() {
         target="_blank"
         rel="noopener noreferrer"
         aria-label="Falar no WhatsApp"
-        title="Fale comigo!"
         className="grid h-14 w-14 place-items-center rounded-full bg-brand text-brand-foreground shadow-[var(--shadow-elegant)] transition-transform duration-300 hover:scale-105"
       >
         <MessageCircle className="h-6 w-6" strokeWidth={2} />
