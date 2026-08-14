@@ -47,6 +47,7 @@ export function Navbar() {
             className="h-9 w-9 shrink-0 object-contain"
             width={36}
             height={36}
+            decoding="async"
           />
           <span className="truncate font-display text-lg tracking-tight text-foreground">
             {SITE.name}
