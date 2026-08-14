@@ -101,7 +101,7 @@ export function Hero() {
             </div>
           </div>
 
-          <div className="hero-float card-surface absolute -top-5 -right-3 hidden items-center gap-3 rounded-2xl border-[#33A13C] bg-background px-4 py-3 will-change-transform lg:flex" style={{ borderColor: "#33A13C" }}>
+          <div className="hero-float card-surface absolute -top-5 -right-3 hidden items-center gap-3 rounded-2xl border-[#33A13C] bg-[#CCDDD8] px-4 py-3 will-change-transform lg:flex" style={{ borderColor: "#33A13C" }}>
             <span className="flex h-9 w-9 items-center justify-center rounded-full bg-brand-soft">
               <ShieldCheck className="h-4 w-4 text-brand" strokeWidth={2} />
             </span>
@@ -113,7 +113,7 @@ export function Hero() {
             </div>
           </div>
 
-          <div className="hero-float-reverse card-surface absolute -bottom-6 -left-6 hidden max-w-[16rem] rounded-2xl border-[#33A13C] bg-background p-4 will-change-transform sm:block" style={{ borderColor: "#33A13C" }}>
+          <div className="hero-float-reverse card-surface absolute -bottom-6 -left-6 hidden max-w-[16rem] rounded-2xl border-[#33A13C] bg-[#CCDDD8] p-4 will-change-transform sm:block" style={{ borderColor: "#33A13C" }}>
             <div className="flex items-center gap-1 text-brand">
               {[...Array(5)].map((_, i) => (
                 <Star key={i} className="h-4 w-4 fill-current" strokeWidth={0} />
