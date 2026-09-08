@@ -1,5 +1,5 @@
 import { MapPin, Phone, MessageCircle, Clock, Navigation } from "lucide-react";
-import { SITE, whatsappUrl } from "@/lib/site";
+import { SITE, whatsappUrl } from "@/lib/config";
 
 export function MapContact() {
   const mapsEmbed = `https://www.google.com/maps?q=${encodeURIComponent(SITE.mapsQuery)}&output=embed`;

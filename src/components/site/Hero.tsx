@@ -9,7 +9,7 @@ import heroWebp640 from "@/assets/hero-640.webp";
 import heroWebp960 from "@/assets/hero-960.webp";
 import heroWebp1200 from "@/assets/hero-1200.webp";
 import { WhatsAppButton } from "./WhatsAppButton";
-import { SITE } from "@/lib/site";
+import { SITE } from "@/lib/config";
 import { useParallax } from "@/hooks/use-parallax";
 
 export function Hero() {

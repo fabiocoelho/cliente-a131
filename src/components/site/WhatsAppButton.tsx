@@ -1,7 +1,7 @@
 import { MessageCircle } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
-import { whatsappUrl } from "@/lib/site";
+import { whatsappUrl } from "@/lib/config";
 
 type Variant = "brand" | "outline" | "ghost" | "dark";
 type Size = "sm" | "md" | "lg";

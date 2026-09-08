@@ -1,4 +1,4 @@
-import { SITE, SITE_INITIAL, whatsappUrl } from "@/lib/site";
+import { SITE, SITE_INITIAL, whatsappUrl } from "@/lib/config";
 
 export function Footer() {
   const links = [

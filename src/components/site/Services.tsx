@@ -9,7 +9,7 @@ import {
   Search,
   ArrowRight,
 } from "lucide-react";
-import { SITE, whatsappUrl } from "@/lib/site";
+import { SITE, whatsappUrl } from "@/lib/config";
 
 const services = [
   {

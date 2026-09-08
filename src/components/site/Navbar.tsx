@@ -2,7 +2,7 @@ import { lazy, Suspense, useEffect, useState } from "react";
 import { Menu } from "lucide-react";
 import { WhatsAppButton } from "./WhatsAppButton";
 import { cn } from "@/lib/utils";
-import { SITE } from "@/lib/site";
+import { SITE } from "@/lib/config";
 import logoRsMultas from "@/assets/logo-rs-multas.png";
 import logoRsMultasWebp from "@/assets/logo-rs-multas.webp";
 

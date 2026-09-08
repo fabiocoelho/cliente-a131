@@ -1,4 +1,4 @@
-import { SITE } from "@/lib/site";
+import { SITE } from "@/lib/config";
 
 const stats = [
   { value: "20", label: "anos de mercado" },

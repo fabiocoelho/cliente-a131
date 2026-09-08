@@ -6,7 +6,7 @@ import aboutWebp640 from "@/assets/about-640.webp";
 import aboutWebp960 from "@/assets/about-960.webp";
 import aboutWebp1200 from "@/assets/about-1200.webp";
 import { WhatsAppButton } from "./WhatsAppButton";
-import { SITE } from "@/lib/site";
+import { SITE } from "@/lib/config";
 
 export function About() {
   return (

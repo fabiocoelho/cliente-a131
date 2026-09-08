@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { MessageCircle } from "lucide-react";
-import { whatsappUrl } from "@/lib/site";
+import { whatsappUrl } from "@/lib/config";
 import { cn } from "@/lib/utils";
 
 export function WhatsAppFab() {

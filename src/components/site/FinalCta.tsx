@@ -1,5 +1,5 @@
 import { WhatsAppButton } from "./WhatsAppButton";
-import { SITE } from "@/lib/site";
+import { SITE } from "@/lib/config";
 
 export function FinalCta() {
   return (

@@ -12,7 +12,7 @@ import { MapContact } from "@/components/site/MapContact";
 import { FinalCta } from "@/components/site/FinalCta";
 import { Footer } from "@/components/site/Footer";
 import { WhatsAppFab } from "@/components/site/WhatsAppFab";
-import { SITE } from "@/lib/site";
+import { SITE } from "@/lib/config";
 import heroAvif960 from "@/assets/hero-960.avif";
 import heroAvif640 from "@/assets/hero-640.avif";
 import heroAvif400 from "@/assets/hero-400.avif";
