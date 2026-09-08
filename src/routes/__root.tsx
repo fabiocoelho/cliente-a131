@@ -11,7 +11,7 @@ import { useEffect, type ReactNode } from "react";
 
 import appCss from "../styles.css?url";
 import { reportLovableError } from "../lib/lovable-error-reporting";
-import { SITE } from "../lib/config";
+import { SITE, themeCss } from "../lib/config";
 import { GetSiteBadge } from "../components/GetSiteBadge";
 
 function NotFoundComponent() {
@@ -121,6 +121,7 @@ function RootShell({ children }: { children: ReactNode }) {
     <html lang="pt-BR">
       <head>
         <HeadContent />
+        <style dangerouslySetInnerHTML={{ __html: themeCss() }} />
       </head>
       <body>
         {children}

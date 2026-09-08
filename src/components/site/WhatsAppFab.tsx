@@ -23,7 +23,7 @@ export function WhatsAppFab() {
     >
       <span
         aria-hidden="true"
-        className="pointer-events-none hidden translate-x-2 rounded-full border border-[#9E9E9E] bg-card px-3 py-1.5 text-sm font-medium text-foreground shadow-[var(--shadow-elegant)] opacity-0 transition-all duration-300 group-hover:translate-x-0 group-hover:opacity-100 sm:block"
+        className="pointer-events-none hidden translate-x-2 rounded-full border border-card-border bg-card px-3 py-1.5 text-sm font-medium text-foreground shadow-[var(--shadow-elegant)] opacity-0 transition-all duration-300 group-hover:translate-x-0 group-hover:opacity-100 sm:block"
       >
         Fale comigo!
       </span>
