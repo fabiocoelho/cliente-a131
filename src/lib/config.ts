@@ -40,16 +40,23 @@ export const SITE_CONFIG = {
     },
   
   /* ------------------------------------------------------------------ */
-    /* c) PALETA DE CORES DA MARCA                                        */
-    /* ATENÇÃO: estes valores são apenas referência/documentação.         */
-    /* As cores realmente aplicadas na interface ficam nos tokens         */
-    /* --brand / --brand-soft / --ring em src/styles.css.                 */
-    /* ------------------------------------------------------------------ */
-    colors: {
-      primary: "#33A13C",
-      primaryHover: "#28802f",
-      accent: "#33A13C",
-    },
+  /* c) PALETA DE CORES DA MARCA                                         */
+  /* Estes valores ALIMENTAM de fato a interface: são injetados como     */
+  /* variáveis CSS no <head> e sobrescrevem os tokens de src/styles.css. */
+  /* Basta trocar o HEX aqui para o site inteiro mudar de cor.           */
+  /* ------------------------------------------------------------------ */
+  colors: {
+    /** Cor principal da marca (botões, destaques, foco). */
+    primary: "#33A13C",
+    /** Tom escuro da marca: hover e textos pequenos (contraste AA). */
+    primaryHover: "#1F6424",
+    /** Cor de acento (usada em detalhes e gráficos). */
+    accent: "#33A13C",
+    /** Fundo das seções alternadas (efeito zebra). */
+    sectionAlt: "#CCDDD8",
+    /** Cor da borda dos cards e itens de FAQ. */
+    cardBorder: "#9E9E9E",
+  },
 
   /* ------------------------------------------------------------------ */
   /* d) TIPOGRAFIA E FONTES                                              */
