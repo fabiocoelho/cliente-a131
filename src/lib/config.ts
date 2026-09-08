@@ -47,15 +47,15 @@ export const SITE_CONFIG = {
   /* ------------------------------------------------------------------ */
   colors: {
     /** Cor principal da marca (botões, destaques, foco). */
-    primary: "#33A13C",
+    primary: "#000000",
     /** Tom escuro da marca: hover e textos pequenos (contraste AA). */
-    primaryHover: "#1F6424",
+    primaryHover: "#000000",
     /** Cor de acento (usada em detalhes e gráficos). */
-    accent: "#33A13C",
+    accent: "#000000",
     /** Fundo das seções alternadas (efeito zebra). */
-    sectionAlt: "#CCDDD8",
+    sectionAlt: "#000000",
     /** Cor da borda dos cards e itens de FAQ. */
-    cardBorder: "#9E9E9E",
+    cardBorder: "#000000",
   },
 
   /* ------------------------------------------------------------------ */
