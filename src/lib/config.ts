@@ -87,3 +87,23 @@ export function whatsappUrl(message?: string) {
 export function whatsappLink(message?: string) {
   return whatsappUrl(message);
 }
+
+/**
+ * CSS gerado a partir de SITE_CONFIG.colors.
+ * Injetado no <head> (ver src/routes/__root.tsx) para sobrescrever os tokens
+ * padrão de src/styles.css — é isto que torna o config a fonte da verdade.
+ */
+export function themeCss() {
+  const c = SITE_CONFIG.colors;
+  return `:root{
+  --brand:${c.primary};
+  --brand-strong:${c.primaryHover};
+  --brand-soft:color-mix(in srgb, ${c.primary} 14%, white);
+  --accent-brand:${c.accent};
+  --ring:${c.primary};
+  --chart-1:${c.primary};
+  --section-alt:${c.sectionAlt};
+  --card-border:${c.cardBorder};
+  --sidebar-ring:${c.primary};
+}`;
+}
