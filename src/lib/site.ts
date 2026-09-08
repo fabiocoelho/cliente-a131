@@ -46,9 +46,9 @@ export const SITE_CONFIG = {
     /* --brand / --brand-soft / --ring em src/styles.css.                 */
     /* ------------------------------------------------------------------ */
     colors: {
-      primary: "#000000",
-      primaryHover: "#000000",
-      accent: "#000000",
+      primary: "#33A13C",
+      primaryHover: "#28802f",
+      accent: "#33A13C",
     },
 
   /* ------------------------------------------------------------------ */
