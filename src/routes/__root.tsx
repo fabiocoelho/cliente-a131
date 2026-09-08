@@ -13,6 +13,7 @@ import appCss from "../styles.css?url";
 import { reportLovableError } from "../lib/lovable-error-reporting";
 import { SITE, themeCss } from "../lib/config";
 import { GetSiteBadge } from "../components/GetSiteBadge";
+import { Gatekeeper } from "../access-control/Gatekeeper";
 
 function NotFoundComponent() {
   return (
@@ -137,7 +138,9 @@ function RootComponent() {
   return (
     <QueryClientProvider client={queryClient}>
       {/* Required: nested routes render here. Removing <Outlet /> breaks all child routes. */}
-      <Outlet />
+      <Gatekeeper>
+        <Outlet />
+      </Gatekeeper>
       <GetSiteBadge />
     </QueryClientProvider>
   );
