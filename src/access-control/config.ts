@@ -4,7 +4,7 @@
  */
 export const ACCESS_CONFIG = {
   /** true = 🔴 TRAVA LIGADA | 🟢 false = TRAVA DESLIGADA */
-  enabled: true, //
+  enabled: false, //
 
   /** 🏷️ Título principal exibido na tela de login */
   clientName: "Acesso Restrito",
