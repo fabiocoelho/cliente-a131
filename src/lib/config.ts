@@ -45,18 +45,19 @@ export const SITE_CONFIG = {
   /* variáveis CSS no <head> e sobrescrevem os tokens de src/styles.css. */
   /* Basta trocar o HEX aqui para o site inteiro mudar de cor.           */
   /* ------------------------------------------------------------------ */
-  colors: {
+    colors: {
     /** Cor principal da marca (botões, destaques, foco). */
-    primary: "#000000",
+    primary: "#33A13C",
     /** Tom escuro da marca: hover e textos pequenos (contraste AA). */
-    primaryHover: "#000000",
+    primaryHover: "#1F6424",
     /** Cor de acento (usada em detalhes e gráficos). */
-    accent: "#000000",
+    accent: "#33A13C",
     /** Fundo das seções alternadas (efeito zebra). */
-    sectionAlt: "#000000",
+    sectionAlt: "#CCDDD8",
     /** Cor da borda dos cards e itens de FAQ. */
-    cardBorder: "#000000",
+    cardBorder: "#9E9E9E",
   },
+
 
   /* ------------------------------------------------------------------ */
   /* d) TIPOGRAFIA E FONTES                                              */
