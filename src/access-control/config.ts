@@ -13,7 +13,7 @@ export const ACCESS_CONFIG = {
   password: "123",
 
   /** ⏳ Data/hora limite de 48h (Formato ISO) */
-  expiresAt: "2026-08-05T23:59:59",
+  expiresAt: "2026-10-05T23:59:59",
 
   /** 🔗 Link para o seu site / agência */
   agencyUrl: "https://www.getsite.com.br",
